@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Backstage"
+  id="myeclipse.1324091113678"
+  context-root="/Backstage"
+  j2ee-spec="6.0"
+  archive="Backstage.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

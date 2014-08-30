@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 设置Web应用的默认Locale为zh_CN -->
+	<constant name="struts.locale" value="zh_CN" />
+	<!-- 设置Struts2默认的ObjectFactory为spring -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 设置Struts2应用是否处于开发模式，通常在开发调试阶段设为true,正式上线后可设为false -->
+	<constant name="struts.devMode" value="true" />
+	<!--改变后缀名 -->
+	<!--<constant name="struts.action.extension" value="action,html"></constant> --><!-- 设置Struts2的默认主题为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 设置文件上传限制 -->
+	<constant name="struts.multipart.maxSize" value="1000000000" />
+	<!-- 通过OGNL访问静态方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<!--乱码过滤器 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+	<constant name="struts.action.excludePattern" value="/Common/*" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.i18n.reload" value="true" />
+	
+	<include file="struts-System.xml"></include>
+
+	<package name="abstractGlobalException" extends="struts-default"
+		abstract="true">
+		<global-results>
+			<result name="globalException">/globalException.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="globalException"
+				exception="java.lang.Exception">
+			</exception-mapping>
+		</global-exception-mappings>
+	</package>
+
+
+	<package name="default" namespace="/" extends="struts-default">
+		<global-results>
+			<result name="exceptionPage">/exception.jsp</result>
+		</global-results>
+		<!--struts2自带的异常处理 -->
+		<global-exception-mappings>
+			<exception-mapping result="exceptionPage"
+				exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+	
+	<package name="PiaoJuTong" extends="json-default">
+		<!-- 配置自定义拦截器LoginedCheckInterceptor -->
+		<interceptors>
+			<interceptor name="loginedCheck" class="LoginedCheckInterceptor.inceptor" />
+			<!-- 定义拦截器栈 -->
+			<interceptor-stack name="systemCheck">
+				<interceptor-ref name="loginedCheck"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 定义全局result -->
+		<global-results>
+			<!-- 定义名为exception的全局result -->
+			<result name="exception">../Backstage/../HomePages/power.jsp</result>
+			<result name="login">/Index.jsp</result>
+			<result name="noprim">../Backstage/../HomePages/power.jsp</result>
+		</global-results>
+		<!-- 定义全局异常映射 -->
+		<!-- <global-exception-maping> -->
+		<!-- 捕捉到Exception异常（所有异常）时跳转到exception所命名的视图上 -->
+		<!-- <exception-maping exception="java.lang.Exceptoin" result="exception"></exception-maping> -->
+		<!-- </global-exception-maping> -->
+	</package>
+</struts>
