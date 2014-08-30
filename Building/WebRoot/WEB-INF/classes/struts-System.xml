@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 管理后台所有action -->
+	<package name="System" namespace="/System" extends="struts-default">
+		<!-- 跳转到主页 -->
+		<action name="pageUser" class="AdminAction" method="pageUser">
+			<result name="success">../Building/../HomePages/Main.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!--退出 -->
+		<action name="UserLoginOut" class="AdminAction" method="UserLoginOut">
+			<result name="success">../Index.jsp</result>
+		</action>
+		<!-- 用户登陆 -->
+		<action name="loginAdmin" class="AdminAction" method="loginAdmin">
+		</action>
+		<!-- 用户信息 -->
+		<action name="selPageUser" class="AdminAction" method="selPageUser">
+			<result name="success">../Building/../HomePages/Member.jsp</result>
+			<result name="error">../Building../Index.jsp</result>
+		</action>
+		<!-- 跳转到修改密码 -->
+		<action name="updatePassPage" class="AdminAction" method="updatePassPage">
+			<result name="success">../Building/../HomePages/ChangePass.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 修改用户信息 -->
+		<action name="updatePass" class="AdminAction" method="updatePass">
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 跳转到修改个人信息 -->
+		<action name="updateMe" class="AdminAction" method="updateMe">
+			<result name="success">../Building/../HomePages/ChangeMe.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 查看所有用户 -->
+		<action name="selUserAll" class="AdminAction" method="selUserAll">
+			<result name="success">../Building/../HomePages/Product.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 删除用户 -->
+		<action name="delUser" class="AdminAction" method="delUser">
+			<result name="success">../Building/../HomePages/Product.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 查询地区 -->
+		<action name="selArea" class="AdminAction" method="selArea">
+			<result name="success">../Mineralsa/../HomePages/Area.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="delArea" class="AdminAction" method="delArea">
+			<result name="success">../Building/../HomePages/Area.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addAreaPage" class="AdminAction" method="addAreaPage">
+			<result name="success">../Building/../HomePages/AddArea.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addArea" class="AdminAction" method="addArea">
+			<result name="success">../Building/../HomePages/Area.jsp</result>
+			<result name="error">../Building/../HomePages/Area.jsp</result>
+		</action>
+		<action name="selCollect" class="AdminAction" method="selCollect">
+			<result name="success">../Building/../HomePages/Collect.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="delCollect" class="AdminAction" method="delCollect">
+			<result name="success">../Building/../HomePages/Collect.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="selInformation" class="AdminAction" method="selInformation">
+			<result name="success">../Building/../HomePages/Information.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addInformation" class="AdminAction" method="addInformation">
+			<result name="success">../Building/../HomePages/Information.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="delInformation" class="AdminAction" method="delInformation">
+			<result name="success">../Building/../HomePages/Information.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<!-- 行业 -->
+		<action name="selType" class="AdminAction" method="selType">
+			<result name="success">../Building/../HomePages/Type.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="delType" class="AdminAction" method="delType">
+			<result name="success">../Building/../HomePages/Type.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addType" class="AdminAction" method="addType">
+			<result name="success">../Building/../HomePages/Type.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<!-- 跳转添加图片 -->
+		<action name="addImagePage" class="AdminAction" method="addImagePage">
+			<result name="success">../Building/../HomePages/AddImages.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 添加图片 -->
+		<action name="addImage" class="AdminAction" method="addImage">
+			<result name="success">../Building/../HomePages/Images.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 更多图片 -->
+		<action name="selImageAll" class="AdminAction" method="selImageAll">
+			<result name="success">../Building/../HomePages/Images.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<!-- 删除图片 -->
+		<action name="delImage" class="AdminAction" method="delImage">
+			<result name="success">../Building/../HomePages/Images.jsp</result>
+			<result name="error">../Building/../Index.jsp</result>
+		</action>
+		<action name="selSeller" class="AdminAction" method="selSeller">
+			<result name="success">../Building/../HomePages/SellerMsg.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addSeller" class="AdminAction" method="addSeller">
+			<result name="success">../Building/../HomePages/UpdateSeller.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="delSeller" class="AdminAction" method="delSeller">
+			<result name="success">../Building/../HomePages/SellerMsg.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="upadeSellerPage" class="AdminAction" method="upadeSellerPage">
+			<result name="success">../Building/../HomePages/UpdateSeller.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addSellerPage" class="AdminAction" method="addSellerPage">
+			<result name="success">../Building/../HomePages/UpdateSeller.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="updateSupplyPage" class="AdminAction" method="updateSupplyPage">
+			<result name="success">../Building/../HomePages/AddSupply.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addSupplyPage" class="AdminAction" method="addSupplyPage">
+			<result name="success">../Building/../HomePages/AddSupply.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="addSupply" class="AdminAction" method="addSupply">
+			<result name="success">../Building/../HomePages/AddSupply.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="selSupply" class="AdminAction" method="selSupply">
+			<result name="success">../Building/../HomePages/Supply.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+		<action name="delSupply" class="AdminAction" method="delSupply">
+			<result name="success">../Building/../HomePages/Supply.jsp</result>
+			<result name="error">../Index.jsp</result>
+		</action>
+	</package>
+	<!-- 接口 -->
+	<package name="ket" namespace="/ket" extends="json-default">
+		<action name="selectCollect" class="CollectAction" method="selectCollect">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="deleteCollect" class="CollectAction" method="deleteCollect">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="addCollect" class="CollectAction" method="addCollect">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="selSupply" class="SupplyAndDemandAction" method="selSupply">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="addSupplyInfo" class="SupplyAndDemandAction"
+			method="addSupplyInfo">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="addDemandInfo" class="SupplyAndDemandAction"
+			method="addDemandInfo">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="allCity" class="CityAction" method="allCity">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="allType" class="CityAction" method="allType">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="allInformat" class="InformationAction" method="allInformat">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 用户登陆 -->
+		<action name="login" class="UserAction" method="login">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 用户注册 -->
+		<action name="register" class="UserAction" method="register">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 用户反馈 -->
+		<action name="putBackMessage" class="UserAction" method="putBackMessage">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 删除收藏 -->
+		<action name="deleteComment" class="CollectAction" method="deleteComment">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+	</package>
+</struts>

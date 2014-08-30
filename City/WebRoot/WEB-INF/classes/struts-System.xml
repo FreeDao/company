@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 管理后台所有action -->
+	<package name="System" namespace="/System" extends="PiaoJuTong">
+	<default-interceptor-ref name="systemCheck" />
+		
+		<action name="pagesLogin" class="AdminAction" method="pagesLogin">
+			<result name="success">../era/../HomePages/Main.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		<action name="selRoles" class="RolesAction" method="selRoles">
+			<result name="success">../era/../HomePages/RolesPages.jsp</result> 
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="pagesRoles" class="RolesAction" method="pagesRoles">
+			<result name="success">../era/../HomePages/RolesAdd.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addRoles" class="RolesAction" method="addRoles">
+			<result name="success">../era/../HomePages/RolesPages.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="pageRolesAdd" class="RolesAction" method="pageRolesAdd">
+			<result name="success">../era/../HomePages/Addrole.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="rolesAdd" class="RolesAction" method="rolesAdd">
+			<result name="success">../era/../HomePages/RolesPages.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="UserLoginOut" class="AdminAction" method="UserLoginOut">
+			<result name="success">../era/../Index.jsp</result>
+		</action>
+		<action name="adminUser" class="AdminAction" method="selAdmin">
+			<result name="success">../era/../HomePages/Admin.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delAdmin" class="AdminAction" method="delAdmin">
+			<result name="success">../era/../HomePages/Admin.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addPages" class="AdminAction" method="addPages">
+			<result name="success">../era/../HomePages/AddAdmin.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updatePassWordPage" class="AdminAction" method="updatePassWordPage">
+			<result name="success">../era/../HomePages/UpdatePassWord.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updatePassWord" class="AdminAction" method="updatePassWord">
+			<result name="success">../era/../HomePages/UpdatePassWord.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selUser" class="UserAction" method="selUser">
+			<result name="success">../era/../HomePages/User.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delUser" class="UserAction" method="delUser">
+			<result name="success">../era/../HomePages/User.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selSeller" class="SellerAction" method="selSeller">
+			<result name="success">../era/../HomePages/Seller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="moveType" class="SellerAction" method="moveType">
+			<result name="success">../era/../HomePages/Seller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delSeller" class="SellerAction" method="delSeller">
+			<result name="success">../era/../HomePages/Seller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		
+		<action name="sellerPage" class="SellerAction" method="sellerPage">
+			<result name="success">../era/../HomePages/AddSeller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selCollect" class="CollectAction" method="selCollect">
+			<result name="success">../era/../HomePages/Collect.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delCollect" class="CollectAction" method="delCollect">
+			<result name="success">../era/../HomePages/Collect.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selComment" class="CommentAction" method="selComment">
+			<result name="success">../era/../HomePages/Comment.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selCity" class="CityAction" method="selCity">
+			<result name="success">../era/../HomePages/City.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delCity" class="CityAction" method="delCity">
+			<result name="success">../era/../HomePages/City.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addCity" class="CityAction" method="addCity">
+			<result name="success">../era/../HomePages/City.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addCityPage" class="CityAction" method="addCityPage">
+			<result name="success">../era/../HomePages/AddCity.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selRoomPage" class="SellerAction" method="selRoomPage">
+			<result name="success">../era/../HomePages/Room.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addRoomPage" class="SellerAction" method="addRoomPage">
+			<result name="success">../era/../HomePages/AddRoom.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addRoom" class="SellerAction" method="addRoom">
+			<result name="success">../era/../HomePages/Room.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delRoom" class="SellerAction" method="delRoom">
+			<result name="success">../era/../HomePages/Room.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="pageFind" class="DwrAction" method="pageFind">
+			<result name="success">../era/../HomePages/Countdown.jsp</result>
+		
+		</action>
+		<action name="pageFindText" class="DwrAction" method="pageFindText">
+			<result name="success">../era/../HomePages/testDwr.jsp</result>
+		
+		</action>
+		
+		<action name="upSeller" class="SellerAction" method="upSeller">
+			<result name="success">../era/../HomePages/Seller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selMarketArea" class="MarketAction" method="selMarketArea">
+			<result name="success">../era/../HomePages/MarketArea.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketAreaPage" class="MarketAction" method="addMarketAreaPage">
+			<result name="success">../era/../HomePages/AddMarketArea.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delMarketArea" class="MarketAction" method="delMarketArea">
+			<result name="success">../era/../HomePages/MarketArea.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selMarketCustomType" class="MarketAction" method="selMarketCustomType">
+			<result name="success">../era/../HomePages/MarketCustomType.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketCustomTypePage" class="MarketAction" method="addMarketCustomTypePage">
+			<result name="success">../era/../HomePages/AddMarketCustomType.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delMarketCustomType" class="MarketAction" method="delMarketCustomType">
+			<result name="success">../era/../HomePages/MarketCustomType.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		
+		
+		<action name="selMarket" class="MarketAction" method="selMarket">
+			<result name="success">../era/../HomePages/Market.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delMarket" class="MarketAction" method="delMarket">
+			<result name="success">../era/../HomePages/Market.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delMarketUser" class="MarketAction" method="delMarketUser">
+			<result name="success">../era/../HomePages/MarketUser.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketPage" class="MarketAction" method="addMarketPage">
+			<result name="success">../era/../HomePages/AddMarket.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketUserPage" class="MarketAction" method="addMarketUserPage">
+			<result name="success">../era/../HomePages/AddMarketUser.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selMarketUser" class="MarketAction" method="selMarketUser">
+			<result name="success">../era/../HomePages/MarketUser.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketUser" class="MarketAction" method="addMarketUser">
+			<result name="success">../era/../HomePages/Market.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateMarketPage" class="MarketAction" method="updateMarketPage">
+			<result name="success">../era/../HomePages/AddMarket.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selNews" class="NewsDetailsAction" method="selNews">
+			<result name="success">../era/../HomePages/News.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delNews" class="NewsDetailsAction" method="delNews">
+			<result name="success">../era/../HomePages/News.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addNewsPage" class="NewsDetailsAction" method="addNewsPage">
+			<result name="success">../era/../HomePages/AddNews.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateNewsPage" class="NewsDetailsAction" method="updateNewsPage">
+			<result name="success">../era/../HomePages/AddNews.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateConvenientPage" class="PopleAction" method="updateConvenientPage">
+			<result name="success">../era/../HomePages/AddPople.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selConvenient" class="PopleAction" method="selConvenient">
+			<result name="success">../era/../HomePages/People.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delConvenient" class="PopleAction" method="delConvenient">
+			<result name="success">../era/../HomePages/People.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addConvenientPage" class="PopleAction" method="addConvenientPage">
+			<result name="success">../era/../HomePages/AddPople.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		
+		<action name="selClient" class="ClientAction" method="selClient">
+			<result name="success">../era/../HomePages/Client.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delClient" class="ClientAction" method="delClient">
+			<result name="success">../era/../HomePages/Client.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addClientPage" class="ClientAction" method="addClientPage">
+			<result name="success">../era/../HomePages/AddClient.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateClientPage" class="ClientAction" method="updateClientPage">
+			<result name="success">../era/../HomePages/AddClient.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addClient" class="ClientAction" method="addClient">
+			<result name="success">../era/../HomePages/Client.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selImage" class="ImagesAction" method="selImage">
+			<result name="success">../era/../HomePages/Images.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delImages" class="ImagesAction" method="delImages">
+			<result name="success">../era/../HomePages/Images.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addProductPage" class="ProductAction" method="addProductPage">
+			<result name="success">../era/../HomePages/AddProduct.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addProduct" class="ProductAction" method="addProduct">
+			<result name="success">../era/../HomePages/AddProduct.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateProductPage" class="ProductAction" method="updateProductPage">
+			<result name="success">../era/../HomePages/AddProduct.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delProduct" class="ProductAction" method="delProduct">
+			<result name="success">../era/../HomePages/Product.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addImagesPage" class="ImagesAction" method="addImagesPage">
+			<result name="success">../era/../HomePages/AddImage.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addImages" class="ImagesAction" method="addImages">
+			<result name="success">../era/../HomePages/AddImage.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addSeller" class="SellerAction" method="addSeller">
+			<result name="success">../era/../HomePages/Seller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateSellerPage" class="SellerAction" method="updateSellerPage">
+			<result name="success">../era/../HomePages/AddSeller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selConvenientId" class="PopleAction" method="selConvenientId">
+			<result name="success">../era/../HomePages/Convenientdetail.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selConvenientDetail" class="ConvenientdetailAction" method="selConvenientDetail">
+			<result name="success">../era/../HomePages/ConvenientdetailId.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delConvenientDetail" class="ConvenientdetailAction" method="delConvenientDetail">
+			<result name="success">../era/../HomePages/ConvenientdetailId.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addPage" class="ConvenientdetailAction" method="addPage">
+			<result name="success">../era/../HomePages/AddConvenientdetail.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updaePage" class="ConvenientdetailAction" method="updaePage">
+			<result name="success">../era/../HomePages/AddConvenientdetail.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addConvenientId" class="AdminAction" method="addConvenientId">
+			<result name="success">../era/../HomePages/AddPople.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="tiaozhuan" class="ProductAction" method="tiaozhuan">
+			<result name="success">../era/../HomePages/Product.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selSellSerManag" class="SellerMangerAction" method="selSellSerManag">
+			<result name="success">../era/../HomePages/SellSerManag.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="sellerManagPage" class="SellerMangerAction" method="sellerManagPage">
+			<result name="success">../era/../HomePages/AddSellserManag.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addsellSerManag" class="SellerMangerAction" method="addsellSerManag">
+			<result name="success">../era/../HomePages/SellSerManag.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateSellerManagerPage" class="SellerMangerAction" method="updateSellerManagerPage">
+			<result name="success">../era/../HomePages/AddSellserManag.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delSellSerManag" class="SellerMangerAction" method="delSellSerManag">
+			<result name="success">../era/../HomePages/SellSerManag.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selProduct" class="ProductAction" method="selProduct">
+			<result name="success">../era/../HomePages/Product.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selBusmarSet" class="MarSetAction" method="selBusmarSet">
+			<result name="success">../era/../HomePages/MarSet.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addBusmarSetPage" class="MarSetAction" method="addBusmarSetPage">
+			<result name="success">../era/../HomePages/AddBusMarSet.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addBusmarSet" class="MarSetAction" method="addBusmarSet">
+			<result name="success">../era/../HomePages/MarSet.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updateBusmarSetPage" class="MarSetAction" method="updateBusmarSetPage">
+			<result name="success">../era/../HomePages/AddBusMarSet.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delBusmarSet" class="MarSetAction" method="delBusmarSet">
+			<result name="success">../era/../HomePages/MarSet.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="updaeSort" class="MarketAction" method="updaeSort">
+			<result name="success">../era/../HomePages/Market.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selRecommend" class="ProductAction" method="selRecommend">
+			<result name="success">../era/../HomePages/Recommend.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delRecommend" class="ProductAction" method="delRecommend">
+			<result name="success">../era/../HomePages/Recommend.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addRecommendPage" class="ProductAction" method="addRecommendPage">
+			<result name="success">../era/../HomePages/AddRecommend.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addRecommend" class="ProductAction" method="addRecommend">
+			<result name="success">../era/../HomePages/Recommend.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delComment" class="CommentAction" method="delComment">
+			<result name="success">../era/../HomePages/Comment.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+	</package>
+
+	<package name="news" namespace="/news" extends="json-default">
+	<action name="cityConvenient" class="ConvenientdetailAction" method="cityConvenient">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+	
+		<action name="adminLogin" class="AdminAction" method="adminLogin">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addAdmin" class="AdminAction" method="addAdmin">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketUser" class="MarketAction" method="addMarketUser">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarket" class="MarketAction" method="addMarket">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketArea" class="MarketAction" method="addMarketArea">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketCustomType" class="MarketAction" method="addMarketCustomType">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addNews" class="NewsDetailsAction" method="addNews">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addConvenientDetail" class="ConvenientdetailAction" method="addConvenientDetail">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selSellerArea" class="MarketAction" method="selSellerArea">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selSellerCustomType" class="SellerAction" method="selSellerCustomType">
+			<result type="json" name="success">
+				<param name="root">listCt</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selSellerMarket" class="MarketAction" method="selSellerMarket">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selProduct" class="ProductAction" method="selProduct">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="findAll" class="DwrAction" method="findAll">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		
+	</package>
+	
+	<package name="dataExchange" namespace="/dataExchange" extends="json-default">
+		<action name="loginUserInfo" class="UserAction" method="loginUserInfo"></action>
+		<action name="registerUserInfo" class="UserAction" method="registerUserInfo"></action>
+		<action name="getNewsDetail" class="NewsDetailsAction" method="getNewsDetail"></action>
+		<action name="getCity" class="CityAction" method="getCity"></action>
+		<action name="getNumber" class="CommentAction" method="getNumber"></action>
+		<action name="putComment" class="CommentAction" method="putComment"></action>
+		<action name="getCommentList" class="CommentAction" method="getCommentList"></action>
+		<action name="addCollect" class="CollectAction" method="addCollect"></action>
+		<action name="getCollect" class="CollectAction" method="getCollect"></action>
+		<action name="getClientList" class="ClientAction" method="getClientList"></action>
+	</package>	
+</struts>

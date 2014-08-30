@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="blogtype" catalog="newera"
+		class="com.era.orm.BlogType">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="product" catalog="newera"
+		class="com.era.orm.Product">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="productcomment" catalog="newera"
+		class="com.era.orm.ProductComment">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="productstyle" catalog="newera"
+		class="com.era.orm.ProductStyle">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="producttype" catalog="newera"
+		class="com.era.orm.ProductType">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="shareproduct" catalog="newera"
+		class="com.era.orm.ShareProduct">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="user" catalog="newera" class="com.era.orm.User">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="userblog" catalog="newera"
+		class="com.era.orm.UserBlog">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="userblogrep" catalog="newera"
+		class="com.era.orm.UserBlogRep">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="userfriend" catalog="newera"
+		class="com.era.orm.UserFriend">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="usergroup" catalog="newera"
+		class="com.era.orm.UserGroup">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="product" catalog="piaojutong"
+		class="com.era.orm.Product">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="admin" catalog="citylife" class="com.era.orm.Admin">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="roles" catalog="citylife" class="com.era.orm.Roles">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="user" catalog="city" class="com.era.orm.User">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="imges" catalog="city" class="com.era.orm.Images">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="admin" catalog="city" class="com.era.orm.Admin">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="roles" catalog="city" class="com.era.orm.Roles">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="seller" catalog="city" class="com.era.orm.Seller">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="product" catalog="city" class="com.era.orm.Product">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="collect" catalog="city" class="com.era.orm.Collect">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="city" catalog="city" class="com.era.orm.City">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="client" catalog="city" class="com.era.orm.Client">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="comment" catalog="city" class="com.era.orm.Comment">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="convenient" catalog="city"
+		class="com.era.orm.Convenient">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="convenientdetail" catalog="city"
+		class="com.era.orm.ConvenientDetail">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="market" catalog="city" class="com.era.orm.Market">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="newsdetails" catalog="city"
+		class="com.era.orm.NewsDetails">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="sellermanager" catalog="city"
+		class="com.era.orm.SellerManager">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="busmarset" catalog="city"
+		class="com.era.orm.BusmarSet">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="tock" catalog="city" class="com.era.orm.Tock">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="recommend" catalog="city"
+		class="com.era.orm.Recommend">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="recommendtype" catalog="city"
+		class="com.era.orm.RecommendType">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="activities" catalog="city"
+		class="com.era.orm.Activities">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="busmarsetmanager" catalog="city"
+		class="com.era.orm.BusmarSetManager">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="lotterydraw" catalog="city"
+		class="com.era.orm.Lotterydraw">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="winning" catalog="city" class="com.era.orm.Winning">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+<table name="luck" catalog="city" class="com.era.orm.Luck">
+	<primary-key>
+		<generator class="native"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

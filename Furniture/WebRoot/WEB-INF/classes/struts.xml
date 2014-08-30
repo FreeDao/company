@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    <struts> 
+	<constant name="struts.multipart.maxSize" value="999999999"/>
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+     <!-- 基本的配置内容 --> 
+
+	<package name="default" extends="struts-default">
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="exception">/exception.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+            <exception-mapping result="error" exception="java.sql.SQLException"></exception-mapping>
+        </global-exception-mappings>
+     </package>
+
+	<package name="strust" extends="default" namespace="/bg">
+     	<!-- 用户 -->
+     	<action name="user" class="userAction" > 
+     		<result name="loginSuccess">../index.jsp</result>
+     	   <result name="loginFail">../login.jsp</result>
+	     </action> 
+	     
+	     <action name="system" class="systemAction" > 
+     		<result name="selMenuList">menu/index.jsp</result>
+     		<result name="goAddOrUpdateMenu">menu/addOrUpdate.jsp</result>
+     		<result name="selListType">list/index.jsp</result>
+	     </action> 
+	 
+     </package>
+     
+     <package name="info" extends="default" namespace="/">
+	 
+	 	<action name="general" class="generalAction"  >
+   			<result name="success">info.jsp</result>
+   		</action>
+	 
+     </package>
+     
+     
+     <package name="json" extends="json-default" namespace="/in">
+     
+     		<action name="login" class="loginAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     		<action name="register" class="registerAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+
+			<action name="sms" class="smsAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     		<action name="list" class="listAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     		<action name="comment" class="commentAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     		<action name="img" class="imgAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     		<action name="general" class="generalAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     		<action name="seller" class="sellerAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     		<action name="shop" class="shopAction"  >
+     			<result type="json" name="success" >
+					<param name="root">map</param>
+				</result>
+     		</action>
+     		
+     </package>
+    </struts> 

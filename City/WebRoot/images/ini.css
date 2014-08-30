@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+/*--------------------------------------------
+  程序编写：张坤  美工：陈银萍 
+  调试策划：友通数码港网络部
+  交流邮箱: arc.zhang@ytsmg.com  arc@archn.cn
+  --------------------------------------------*/
+/* 默认数字框样式 */
+.ipt{font-size:18px;height:18px;width:40px;}
+/* 不同奖项数字框样式 */
+.ipt5{font-size:70px;height:70px;width:180px;}
+.ipt2{font-size:85px;height:85px;width:260px;}
+.ipt1{font-size:90px;height:90px;width:300px;}
+
+/* CSS Document */
+*{font-size:14px;}
+body {background-repeat: no-repeat;margin:0px;padding:0px;overflow:hidden;background:#2C0001 url('BG_01.jpg');}
+div.Top{width:100%;min-height:693px;}
+div.End{width:80%;margin:11px auto;display:none;background-repeat: no-repeat;filter:Alpha(Opacity=85);-moz-opacity:0.7;/*兼容的透明样式*/padding-top:230px;}
+div.End ul{text-align:left;background:#FFFFFF; padding:10px 0;}
+div.End ul li{line-height:26px; color:#800000; font-weight:bold; border-bottom:1px #FF8080 dashed;}
+div.End ul li span{ padding:0 9px; font-size:15px;word-wrap:break-word; /*内容将在边界内换行*/ }
+
+a {color:#fff;}
+ul{margin:0;padding:0;list-style: none;}
+#num{width:980px;height:300px;}
+
+h2.title{margin-top:20px;font-size:48px;color: #800000;line-height:28px;font-weight: bolder;}
+#Main{text-align:center;}
+.MainBG{height:270px;margin:260px 15px 0 15px;background-image:url('BG.gif');filter:Alpha(Opacity=85);-moz-opacity:0.7;/*兼容的透明样式*/padding:5px;}
+.input{margin-top:-10px;}
+.input input{text-align:center;margin:2px 2px;display:inline;background-color:#fff;color:#020000; border:1px red dashed;}
+
+#input{text-align:center;}
+#input input{height:40px;width:100px;margin:15px 5px 5px;}
+#out{margin:5px 15px 5px 15px;color: #FFFF00;}
+#out fieldset{text-align:left;}
+#out legend{color:white;font-weight:bolder; padding:0 5px;}
+#out #tableOUT{overflow-x:hidden;overflow-y:auto;height:115px;padding-top:5px;}
+#out .oTitle{padding:0 10px;line-height:20px;font-weight:bolder;}
+#out .oMain{ padding:0 5px; line-height:20px; font-size:14px;}
+#out li{border-bottom:1px white dashed;clear:both;padding-top:2px;line-height:30px;zoom:1;}
+.oneOut{display:none; width:50%;height:145px; position:absolute;z-index:1000;left:25%;top:320px;overflow:hidden;}
+.oneOut div{width:360px;height:145px; margin:0 auto; background:url(u.gif) no-repeat; text-align:center; color:yellow; line-height:140px; font-family:黑体; font-size:100px;font-weight:bold;}
+.OFF{position: absolute;z-index: 1;right: 10px;top: 10px;cursor:pointer;font-weight:bolder;color:orange;}
+.CTRL{position: absolute;z-index: 1;right: 45px;top: 10px;cursor:pointer;font-weight:bolder;color:orange;}
+.QD{width:200px;height:60px;font-size:28px;}
+
+/*参数控制相关*/
+#ctrl{
+				display: none;
+				position:absolute;
+				left:10px;
+				bottom:10px;
+				top:10px;
+				right:10px;
+			   background:white;
+			   z-index:10001;
+			   filter:Alpha(Opacity=95);-moz-opacity:0.95;
+			   border:2px solid yellow;
+			   overflow: auto;
+}
+.m_title{width:150px;}
+.m_num{width:60px;text-align: right;}
+.m_style{width:300px;}

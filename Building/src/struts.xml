@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  
+	<!-- 设置Web应用的默认Locale为zh_CN -->
+	<constant name="struts.locale" value="zh_CN" />
+	<!-- 设置Struts2默认的ObjectFactory为spring -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 设置Struts2应用是否处于开发模式，通常在开发调试阶段设为true,正式上线后可设为false -->
+	<constant name="struts.devMode" value="true" />
+	<!--改变后缀名 -->
+	<!--<constant name="struts.action.extension" value="action,html"></constant>
+	--><!-- 设置Struts2的默认主题为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 设置文件上传限制 -->
+	<constant name="struts.multipart.maxSize" value="1000000000" />
+	<!-- 通过OGNL访问静态方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<!--乱码过滤器 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+	<constant name="struts.action.excludePattern" value="/Common/*"/>
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	<constant name="struts.i18n.reload" value="true"/>
+
+    
+ <package name="abstractGlobalException" extends="struts-default" abstract="true">
+<global-results>
+<result name="globalException">/globalException.jsp</result>
+</global-results>
+<global-exception-mappings>
+<exception-mapping result="globalException" exception="java.lang.Exception">
+</exception-mapping>
+</global-exception-mappings>
+</package>
+    
+	<include file="struts-System.xml"></include>
+	<package name="default" namespace="/"  extends="struts-default">
+        <global-results>
+	  <result name="exceptionPage">/exception.jsp</result>
+        </global-results>
+        <!--struts2自带的异常处理 -->
+        <global-exception-mappings>  
+             <exception-mapping result="exceptionPage" exception="java.lang.Exception"></exception-mapping>
+        </global-exception-mappings>
+      </package >
+</struts>

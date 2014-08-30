@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="CellCode"
+  id="myeclipse.1324091113678"
+  context-root="/CellCode"
+  j2ee-spec="6.0"
+  archive="CellCode.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
