@@ -1,0 +1,224 @@
+ 	body{
+    	padding: 0;
+    	font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    	background: #f4f4f4;
+    	min-width:320px;
+    	max-width: 700px;
+    	margin: 0 auto;
+    }
+    
+    .header{
+    	min-height:45px;
+    	background-image: url("../img/bg_title.png");
+    	/* background-color:#3CB371; */
+    	/* -webkit-border-radius: 5px; */
+    }
+    
+    .header .refresh{
+    	float: right;
+    }
+    
+    .header .city{
+    	margin: 16px 0 0 5px;
+    	float:left;
+    	color:white;
+    	background-image: url("../img/city.png");
+    	background-repeat: no-repeat;
+    	background-size: 22px; 
+    }
+    
+    select{
+    
+    padding-left:23px;
+    
+    color:white;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    
+    font: -webkit-small-control;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	
+    }
+    
+    .header h3{
+    	font-size:19px;
+    	color: white;
+    	width: 40px;
+    	margin: 0 auto;
+    	padding-top: 13px;
+    }
+    
+    .search{
+    	background: #E4E2E2;
+    	padding: 5px 0px;
+    }
+    
+    .search .searchBar{
+    	background-color: #ffffff;
+    	border : 1px solid #ccc;
+    	-webkit-border-radius: 25px;
+    	width: 94%;
+    	margin:0 3%;
+    }
+    
+    .search input{
+    	border: 0;
+    	-webkit-border-radius: 25px;
+    	height:25px;
+    	width: 79%;
+    	
+    }
+    
+    .search .searchBar a{ 
+    	float : right;
+    	margin-top:4px;
+    	height:18px;
+    	border-left: 1px solid #ccc;
+    }
+    
+    .search .searchBar img{ 
+    	margin: 3px 5px 0 6px;
+    }
+    
+    .imgCell{
+    	width:75px;
+    	height:75px ;
+    	display:inline-block;
+    	margin-top:6px;
+    }
+    
+    .imgCell label{
+    	position: absolute;
+    	margin:22px 22px;
+    	color: #007A5D;
+    	width:40px;
+    }
+    
+    .bg{
+    	 z-index:2;
+    	/* display: none; */
+    	position: absolute; 
+    	top:0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	background-color: #ccc;
+   	 	filter:alpha(opacity=40);  
+      	-moz-opacity:0.4;  
+      	-khtml-opacity: 0.4;  
+      	opacity: 0.4;  
+      	max-width: 700px;
+      	margin: 0 auto;
+    }
+    
+    .loadingBg{
+     	z-index:2;
+     	position: absolute;
+	    bottom:10px;
+	    width:100%;
+	    height:100%;
+	    max-width:700px;
+	   
+    }
+    
+    .loadingContainer{
+     width:100%;
+	    height:100%;
+      display:-moz-box; display:-webkit-box; display:-o-box; display:box;
+		-moz-box-pack:center; -webkit-box-pack:center; -o-box-pack:center; box-pack:center;
+		-moz-box-align:center; -webkit-box-align:center; -o-box-align:center; box-align:center;
+    }
+    
+    .loading{
+    	height: 100px;
+    	width: 250px;
+    	height: 120px;
+    	background-color: white;
+    	-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	-o-border-radius: 5px;
+    	border-radius: 5px;
+    	  display:-moz-box; display:-webkit-box; display:-o-box; display:box;
+		-moz-box-pack:center; -webkit-box-pack:center; -o-box-pack:center; box-pack:center;
+		-moz-box-align:center; -webkit-box-align:center; -o-box-align:center; box-align:center;
+    } 
+    
+    .loading div img{
+    	float: left;
+	}
+    
+    .loading div span{
+    	margin:7px 0 0 2px;
+    	color:rgb(57, 160, 156);
+		margin-bottom: 5px;
+		display: inline-block;	
+	}
+    
+    /* .swipeLine{
+    	margin-left:7%;
+    } */
+    
+    /* .swipe-wrap div a{
+    	margin-top:10px;
+    	display:inline-block;
+    	width: 28%;
+    	margin: 2%;
+    	height:70px;
+    	background-image: url("img/circle.png");
+    	background-size: 82px 70px;
+    } */
+    
+    /* .swipe-wrap div a label{
+    	position: absolute;
+    	margin:30px 22px;
+    	color: #007A5D;
+    } */
+    
+    
+    /* .content img{
+    	width: 28%;
+    	height:20%;
+    	margin: 2%;
+    } */
+    
+    /* img{
+    	-webkit-border-radius: 5px;
+    }
+    
+    .section{
+    	border: 1px solid #dedede;
+    	background-color: #fff;
+    	-webkit-border-radius: 5px;
+    }
+    
+    .section{
+    	margin-top: 5px;
+    }
+    
+    .section h3{
+    	margin-left: 8px;
+    	color: #00BFFF;
+    }
+    
+     .section ul li{
+		margin:0 0 8px -12px;
+    	color: #00BFFF;
+    }
+     .section ul li label{
+    	color: #000000;
+    }
+    
+    .time{
+    	margin: 8px 0 8px 8px;
+    }
+    
+    .time img{
+    	margin-bottom: -3px;
+    } */

@@ -1,0 +1,252 @@
+$(function() {
+
+	var pageNow = 1;
+
+	var title = getQueryStringByName("type");
+	var typeId = getQueryStringByName("typeId");
+	var cityId = getQueryStringByName("cityId");
+
+	$("header h3").html(decodeURI(title));
+
+	$
+			.ajax({
+				type : "get",
+				url : "../dataExchange/getSellerList.action?&pageNo=1&pageNum=15&sellerId=-1&cityId="
+						+ cityId
+						+ "&log=-122.400009&dim=37.791485&typeId="
+						+ typeId,
+				beforeSend : function(XMLHttpRequest) {
+					// ShowLoading();
+				},
+				success : function(data, textStatus) {
+					var json = eval("(" + data + ")");
+					$
+							.each(
+									json.results,
+									function(index, item) {
+										$("#dataArea")
+												.append(
+														"<dd onclick=\"postForm({'type':\'"
+																+ encodeURI(title)
+																+ "\','typeId':\'"
+																+ typeId
+																+ "\','cityId':\'"
+																+ cityId
+																+ "\','logo':\'"
+																+ item.logo
+																+ "\','title':\'"
+																+ encodeURI(item.titile)
+																+ "\','level':\'"
+																+ item.level
+																+ "\','preferen':\'"
+																+ item.preferential
+																+ "\','phone':\'"
+																+ item.phone
+																+ "\','address':\'"
+																+ encodeURI(item.address)
+																+ "\','product':\'"
+																+ encodeURI(item.name)
+																+ "\','productImgs':\'"
+																+ item.productImgs
+																+ "\','brief':\'"
+																+ encodeURI(item.brief)
+																+ "\','briefImgs':\'"
+																+ item.sellerImgs
+																+ "\','sellerId':\'"
+																+ item.id
+																+ "\'})\" ><div class='lineDiv' ><div class='imgDiv' ><img src='"
+																+ item.logo
+																+ "' width='81' height='62' /></div> <div class=contentDiv ><div class='titleDiv' ><h4>"
+																+ item.titile
+																+ "</h4><span><img src='img/position.png' width='7' />5456</span></div><div class='quotation' ><img src='img/arrow_right.png' width='4' /><span>"
+																+ item.brief
+																+ "</span></div><div class='infoDiv' ><a href='tel:"
+																+ item.phone
+																+ "' class='phoneSpan' ><span>"
+																+ item.phone
+																+ "</span></a><span class='sign' >优惠:<span>"
+																+ item.preferential
+																+ "%</span></span></div></div></div> </div> </dd>");
+									});
+					iscrollObj.refresh();
+				},
+				complete : function(XMLHttpRequest, textStatus) {
+					// HideLoading();
+				},
+				error : function() {
+					// 请求出错处理
+				}
+			});
+
+	var pulldownAction = function() {
+		$
+				.ajax({
+					type : "get",
+					url : "../dataExchange/getSellerList.action?&pageNo=1&pageNum=15&sellerId=-1&cityId="
+							+ cityId
+							+ "&log=-122.400009&dim=37.791485&typeId="
+							+ typeId,
+					beforeSend : function(XMLHttpRequest) {
+						// ShowLoading();
+					},
+					success : function(data, textStatus) {
+						pageNow = 1;
+						$("#dataArea").children().each(function() {
+							this.remove();
+						});
+						var json = eval("(" + data + ")");
+						$
+								.each(
+										json.results,
+										function(index, item) {
+											$("#dataArea")
+													.append(
+															"<dd onclick=\"postForm({'type':\'"
+																	+ encodeURI(title)
+																	+ "\','typeId':\'"
+																	+ typeId
+																	+ "\','cityId':\'"
+																	+ cityId
+																	+ "\','logo':\'"
+																	+ item.logo
+																	+ "\','title':\'"
+																	+ encodeURI(item.titile)
+																	+ "\','level':\'"
+																	+ item.level
+																	+ "\','preferen':\'"
+																	+ item.preferential
+																	+ "\','phone':\'"
+																	+ item.phone
+																	+ "\','address':\'"
+																	+ encodeURI(item.address)
+																	+ "\','product':\'"
+																	+ encodeURI(item.name)
+																	+ "\','productImgs':\'"
+																	+ item.productImgs
+																	+ "\','brief':\'"
+																	+ encodeURI(item.brief)
+																	+ "\','briefImgs':\'"
+																	+ item.sellerImgs
+																	+ "\','sellerId':\'"
+																	+ item.id
+																	+ "\'})\"><div class='lineDiv' ><div class='imgDiv' ><img src='"
+																	+ item.logo
+																	+ "' width='81' height='62' /></div> <div class=contentDiv ><div class='titleDiv' ><h4>"
+																	+ item.titile
+																	+ "</h4><span><img src='img/position.png' width='7' />5456</span></div><div class='quotation' ><img src='img/arrow_right.png' width='4' /><span>"
+																	+ item.brief
+																	+ "</span></div><div class='infoDiv' ><a href='tel:"
+																	+ item.phone
+																	+ "' class='phoneSpan' ><span>"
+																	+ item.phone
+																	+ "</span></a><span class='sign' >优惠:<span>"
+																	+ item.preferential
+																	+ "%</span></span></div></div></div> </div> </dd>");
+										});
+						this.refresh();
+					},
+					complete : function(XMLHttpRequest, textStatus) {
+						// HideLoading();
+					},
+					error : function() {
+						// 请求出错处理
+					}
+				});
+		this.refresh();
+		console.log("下拉执行逻辑");
+	};
+	var pullupAction = function() {
+		$
+				.ajax({
+					type : "get",
+					url : "../dataExchange/getSellerList.action?&pageNo="
+							+ (pageNow + 1) + "&pageNum=15&sellerId=-1&cityId="
+							+ cityId + "&log=-122.400009&dim=37.791485&typeId="
+							+ typeId,
+					beforeSend : function(XMLHttpRequest) {
+						// ShowLoading();
+					},
+					success : function(data, textStatus) {
+						var json = eval("(" + data + ")");
+						$
+								.each(
+										json.results,
+										function(index, item) {
+											$("#dataArea")
+													.append(
+															"<dd onclick=\"postForm({'type':\'"
+																	+ encodeURI(title)
+																	+ "\','typeId':\'"
+																	+ typeId
+																	+ "\','cityId':\'"
+																	+ cityId
+																	+ "\','logo':\'"
+																	+ item.logo
+																	+ "\','title':\'"
+																	+ encodeURI(item.titile)
+																	+ "\','level':\'"
+																	+ item.level
+																	+ "\','preferen':\'"
+																	+ item.preferential
+																	+ "\','phone':\'"
+																	+ item.phone
+																	+ "\','address':\'"
+																	+ encodeURI(item.address)
+																	+ "\','product':\'"
+																	+ encodeURI(item.name)
+																	+ "\','productImgs':\'"
+																	+ item.productImgs
+																	+ "\','brief':\'"
+																	+ encodeURI(item.brief)
+																	+ "\','briefImgs':\'"
+																	+ item.sellerImgs
+																	+ "\','sellerId':\'"
+																	+ item.id
+																	+ "\'})\"><div class='lineDiv' ><div class='imgDiv' ><img src='"
+																	+ item.logo
+																	+ "' width='81' height='62' /></div> <div class=contentDiv ><div class='titleDiv' ><h4>"
+																	+ item.titile
+																	+ "</h4><span><img src='img/position.png' width='7' />5456</span></div><div class='quotation' ><img src='img/arrow_right.png' width='4' /><span>"
+																	+ item.brief
+																	+ "</span></div><div class='infoDiv' ><a href='tel:"
+																	+ item.phone
+																	+ "' class='phoneSpan' ><span>"
+																	+ item.phone
+																	+ "</span></a><span class='sign' >优惠:<span>"
+																	+ item.preferential
+																	+ "%</span></span></div></div></div> </div> </dd>");
+										});
+						this.refresh();
+					},
+					complete : function(XMLHttpRequest, textStatus) {
+						pageNow++;
+						// HideLoading();
+					},
+					error : function() {
+						// 请求出错处理
+					}
+				});
+
+		this.refresh();
+		console.log("上拉执行逻辑");
+	};
+	var iscrollObj = iscrollAssist.newVerScrollForPull($('#wrapper'),
+			pulldownAction, pullupAction);
+	iscrollObj.refresh();
+});
+
+function postForm(data) {
+	var myForm = document.createElement("form");
+	myForm.method = "post";
+	myForm.action = "appDetail.action";
+	for ( var key in data) {
+		var myInput = document.createElement("input");
+		myInput.name = key;
+		myInput.value = data[key];
+		myInput.type = "hidden";
+		myForm.appendChild(myInput);
+	}
+	document.body.appendChild(myForm);
+	myForm.submit();
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>错误提示</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+body{background:url(../images/404.jpg) center 200px no-repeat;}
+.content{margin:0 auto;width:860px;}
+.ts{ margin:180px 0 0 460px;font-family:"microsoft yahei"; color:#FFF; font-size:14px;}
+.ts h2{ font-size:16px;}
+.re{ text-align:center; margin-top:180px;}
+</style>
+<script language="javascript">
+var nn = 4;
+function num()
+{
+ document.getElementById("nuber").innerHTML = nn;
+ 
+ if(nn==0){
+	 window.location.href=""}
+	 else{nn --;}
+}
+function SetNum()
+{
+ setInterval("num()",1000);
+}
+</script>
+  </head>
+<body onLoad="SetNum();">
+<div class="content">
+<div><img src="../images/logo.gif" width="117" height="48"/></div>
+<div class="ts">发生错误!<br/><br/><br/><br/><span id="nuber">5</span>秒内系统将a<br/>
+　　自动返回首页</div>
+<div class="re"><a href=""><img src="../images/404-re.gif" style="border:0 none;"></a></div>
+</div>
+
+  </body>
+</html>

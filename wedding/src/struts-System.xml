@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 管理后台所有action -->
+	<package name="System" namespace="/System" extends="struts-default">
+		<!-- 跳转到主页 -->
+		<action name="pageUser" class="AdminAction" method="pageUser">
+			<result name="success">../JunKeting/../HomePages/Main.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!--退出 -->
+		<action name="UserLoginOut" class="AdminAction" method="UserLoginOut">
+			<result name="success">../JunKeting/../index.jsp</result>
+		</action>
+		<!-- 用户登陆 -->
+		<action name="loginAdmin" class="AdminAction" method="loginAdmin">
+		</action>
+		<!-- 用户信息 -->
+		<action name="selPageUser" class="AdminAction" method="selPageUser">
+			<result name="success">../JunKeting/../HomePages/Member.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 跳转到修改密码 -->
+		<action name="updatePassPage" class="AdminAction" method="updatePassPage">
+			<result name="success">../JunKeting/../HomePages/ChangePass.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 修改用户信息 -->
+		<action name="updatePass" class="AdminAction" method="updatePass"></action>
+		<!-- 跳转到修改个人信息 -->
+		<action name="updateMe" class="AdminAction" method="updateMe">
+			<result name="success">../JunKeting/../HomePages/ChangeMe.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 查看所有用户 -->
+		<action name="selUserAll" class="AdminAction" method="selUserAll">
+			<result name="success">../JunKeting/../HomePages/Product.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 删除用户 -->
+		<action name="delUser" class="AdminAction" method="delUser">
+			<result name="success">../JunKeting/../HomePages/Product.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 删除景点 -->
+		<action name="delFeature" class="AdminAction" method="delFeature">
+			<result name="success">../JunKeting/../HomePages/SellerMsg.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 查询所有景点 -->
+		<action name="selfeatureAll" class="AdminAction" method="selfeatureAll">
+			<result name="success">../JunKeting/../HomePages/SellerMsg.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 跳转到更新页面 -->
+		<action name="upadeFeaturePage" class="AdminAction" method="upadeFeaturePage">
+			<result name="success">../JunKeting/../HomePages/UpdateSeller.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 添加景点 -->
+		<action name="addFeature" class="AdminAction" method="addFeature">
+			<result name="success">../JunKeting/../HomePages/UpdateSeller.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 跳转添加图片 -->
+		<action name="addImagePage" class="AdminAction" method="addImagePage">
+			<result name="success">../JunKeting/../HomePages/AddImages.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 添加图片 -->
+		<action name="addImage" class="AdminAction" method="addImage">
+			<result name="success">../JunKeting/../HomePages/AddImages.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 更多图片 -->
+		<action name="selImageAll" class="AdminAction" method="selImageAll">
+			<result name="success">../JunKeting/../HomePages/Images.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 删除图片 -->
+		<action name="delImage" class="AdminAction" method="delImage">
+			<result name="success">../JunKeting/../HomePages/Images.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 所有地区 -->
+		<action name="selAreaAllId" class="AdminAction" method="selAreaAllId">
+			<result name="success">../JunKeting/../HomePages/Area.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 删除地区 -->
+		<action name="delArea" class="AdminAction" method="delArea">
+			<result name="success">../JunKeting/../HomePages/Area.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 跳转到更新地区 -->
+		<action name="updaeAreaPage" class="AdminAction" method="updaeAreaPage">
+			<result name="success">../JunKeting/../HomePages/AddArea.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 更新地区 -->
+		<action name="updateArea" class="AdminAction" method="updateArea">
+			<result name="success">../JunKeting/../HomePages/Area.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+		<!-- 跳转添加地区 -->
+		<action name="addAreaPage" class="AdminAction" method="addAreaPage">
+			<result name="success">../JunKeting/../HomePages/AddArea.jsp</result>
+			<result name="error">../JunKeting/../Index.jsp</result>
+		</action>
+	</package>
+	<package name="ket" namespace="/ket" extends="json-default">
+	<!-- 查询全部区域 -->
+		<action name="areaAll" class="AreaAction" method="areaAll">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 查询附近景点或通过城市查询 -->
+		<action name="featureAll" class="FeatureAction" method="featureAll">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 评论 -->
+		<action name="addComment" class="CommentAction" method="addComment">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 查询评论 -->
+		<action name="selCommnetId" class="CommentAction" method="selCommnetId">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 查询实景 -->
+		<action name="outdoorAll" class="OutdoorAction" method="outdoorAll">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 用户登陆 -->
+		<action name="login" class="UserAction" method="login">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 查询所有酒店 -->
+		<action name="hotelAll" class="CityLifeAction" method="hotelAll">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 用户注册 -->
+		<action name="register" class="UserAction" method="register">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 用户反馈 -->
+		<action name="putBackMessage" class="UserAction" method="putBackMessage">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		
+		
+		<!-- 婚庆公司 -->
+		<action name="company" class="FeatureAction" method="company">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 所有资讯 -->
+		<action name="info" class="FeatureAction" method="info">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 婚庆策划 -->
+		<action name="paln" class="FeatureAction" method="paln">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 查询婚庆策划类别 -->
+		<action name="classifcation" class="FeatureAction" method="classifcation">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 版本更新 -->
+		<action name="checkVersion" class="FeatureAction" method="checkVersion">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+	</package>
+</struts>

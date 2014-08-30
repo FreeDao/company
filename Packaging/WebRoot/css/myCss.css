@@ -1,0 +1,20 @@
+.showLogo {
+	display: inline-block;
+	border: 1px solid #eee;
+	border-radius: 5px;
+}
+
+.showLogo img {
+	padding: 1px;
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+}
+
+.delImg{
+	width:40px !important;
+	height: 40px !important;
+	display: block !important;
+	background: rgba(56, 156, 240, 0.8) !important;
+	border-radius:100% !important;
+}

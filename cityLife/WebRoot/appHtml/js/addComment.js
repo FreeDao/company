@@ -1,0 +1,67 @@
+var sellerIdVal = getQueryStringByName("sellerId");
+var levelVal = 0;
+function myInit() {
+
+}
+
+function changeImg(t) {
+	var imgs = document.getElementsByName("img");
+	var level = document.getElementById("level");
+	levelVal = t.className;
+	level.value = t.className;
+	for ( var index in imgs) {
+		if (imgs[index].className <= t.className) {
+			imgs[index].src = "img/star_solid.png";
+		}
+		if (imgs[index].className > t.className) {
+			imgs[index].src = "img/star_empty.png";
+		}
+	}
+}
+
+function mySubmit(t) {
+	var loading = document.getElementById("loading");
+	
+	var content = document.getElementById("content");
+	
+	if (content.value == "") {
+		alert("评价内容不能为空！");
+		content.focus();
+		return;
+	}
+	
+	t.disabled = "disabled";
+	loading.style.display = "block";
+	
+	
+	// myForm.submit();
+	
+	js_ajax({
+		type : "post",
+		url : "../dataExchange/putComment.action",
+		async : true,
+		data :{
+				sellerId : sellerIdVal,
+				user : '游客',
+				content : content.value,
+				level : levelVal
+			  },
+		success : function(data){
+			var json = eval("(" + data + ")");
+			if(json.responseCode == 0){
+				t.disabled = "";
+				loading.style.display = "none";
+				alert('评论成功！');
+			}else{
+				alert('评论失败！');
+			}
+			window.location.href = "appComment.action?sellerId="+sellerIdVal;
+//			setTimeout(window.location.reload(-1),5000);
+		},
+		load : function(){
+			
+		}
+	});
+
+	// window.location.href = "addComment.html?sellerId="+sellerIdVal;
+}

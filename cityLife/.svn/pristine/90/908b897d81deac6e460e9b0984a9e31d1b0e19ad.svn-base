@@ -1,0 +1,60 @@
+package com.era.action;
+
+import java.net.URLDecoder;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.interceptor.ServletRequestAware;
+
+import com.era.orm.Comment;
+import com.era.service.CommentService;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class AppAction extends ActionSupport implements ServletRequestAware{
+
+	private HttpServletRequest request;
+	
+	private CommentService commentService;
+	
+	public String detail(){
+		try {
+			int total = commentService.countComment(Integer.valueOf(request.getParameter("sellerId")));
+			List<Comment> list = commentService.getCommentInfo(Integer.valueOf(request.getParameter("sellerId")),1,3);
+			request.setAttribute("sellerId", request.getParameter("sellerId"));
+			request.setAttribute("total", total);
+			request.setAttribute("commentList", list);
+			request.setAttribute("type", URLDecoder.decode(request.getParameter("type"),"UTF-8"));
+			request.setAttribute("typeId", request.getParameter("typeId"));
+			request.setAttribute("cityId", request.getParameter("cityId"));
+			request.setAttribute("logo", request.getParameter("logo"));
+			request.setAttribute("title", URLDecoder.decode(request.getParameter("title"),"UTF-8"));
+			request.setAttribute("level", request.getParameter("level"));
+			request.setAttribute("preferen", request.getParameter("preferen"));
+			request.setAttribute("phone", request.getParameter("phone"));
+			request.setAttribute("address", URLDecoder.decode(request.getParameter("address"),"UTF-8"));
+			request.setAttribute("product", URLDecoder.decode(request.getParameter("product"),"UTF-8"));
+			request.setAttribute("productImgs", request.getParameter("productImgs"));
+			request.setAttribute("brief", URLDecoder.decode(request.getParameter("brief"),"UTF-8"));
+			request.setAttribute("briefImgs", request.getParameter("briefImgs"));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return SUCCESS;
+	}
+	
+	@Override
+	public void setServletRequest(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		this.request = request;
+	}
+
+	public CommentService getCommentService() {
+		return commentService;
+	}
+
+	public void setCommentService(CommentService commentService) {
+		this.commentService = commentService;
+	}
+
+}

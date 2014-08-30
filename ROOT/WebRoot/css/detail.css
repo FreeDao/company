@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+.yemian{ width:1005px; height:auto; margin:0px auto; background-color:#FFF; margin-top:100px;}
+.title{ font-size:24px; color:#666; font-family:"微软雅黑"; margin-left:15px; padding-top:10px;}
+.moreinformation{ width:980px; height:185px; margin:0px auto; margin-top:10px;}
+.mainimg{ width:260px; height:185px; float:left;}
+.mainnews{ width:600px; height:185px; float:left; margin-left:30px;}
+.xingxing{ width:450px; height:30px;}
+.xingxing ul{ margin:0px;}
+.xingxing ul li{ float:left; line-height:30px; margin-left:5px;}
+.xingxing li a{ font-size:13px; color:#666; font-family:"微软雅黑";}
+.youhui{ width:250px; height:30px;}
+.youhui ul{ margin:0px;}
+.youhui ul li{ float:left; line-height:30px; margin-left:5px; text-align:center;}
+.youhui li a{ font-size:16px; color:#666; font-family:"微软雅黑";}
+.youhuizi{ color:#FFF; font-size:15px; font-family:"微软雅黑";}
+.youhuijieshao{ width:600px; height:80px; margin-top:10px;}
+.youhuijieshao h1{ width:450px; height:20px; margin:0px; margin-left:5px;}
+.youhuijieshao h1 a{ font-size:13px; color:#666; font-family:"微软雅黑";}
+.youhuijieshao h1 b{ font-size:13px; color:#9d9d9d;  font-family:"微软雅黑"; margin-left:5px;}
+.youhuijieshao b{ font-size:13px; color:#9d9d9d; font-family:"宋体"; line-height:20px;}
+.phone{ width:600px; height:30px;}
+.phone ul{ margin:0px;}
+.phone ul li{ float:left; margin-left:5px;}
+.zimu{ float:left; width:120px; height:30px; margin-left:25px;}
+.zimu a{ line-height:30px; font-size:13px; color:#FFF; font-family:"微软雅黑";}
+.adress{ width:350px; height:30px;}
+.adress a{ font-size:15px; color:#9d9d9d; font-family:"微软雅黑"; line-height:30px;}
+.services{ width:243px; height:28px; margin-left:15px; margin-top:10px;}
+.fanye{
+	width:978px; margin:0px auto; height:23px;}
+.fanye ul{ margin:0px auto; height:23px;}	
+.fanye li{ float:left; list-style-type:none; margin-left:10px; text-align:center;}
+.hengde{ width:490px; height:24px; margin-left:15px;}
+.zutu{ width:980px; margin:0px auto; height:116px;}
+.xianlu{ width:980px; height:100px; margin:0px auto;}
+.lei{ width:300px; height:100px; float:left;}
+.xianlutu{ width:193px; height:81px; float:left;}
+.xianlubutton{ width:100px; height:100px; float:left;}
+.xianlubutton img{ padding-left:5px; padding-top:5px;}
+.fenge{ width:1px; height:80px; float:left; background-color:#999;}

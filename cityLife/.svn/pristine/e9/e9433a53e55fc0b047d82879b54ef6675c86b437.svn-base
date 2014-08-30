@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 管理后台所有action -->
+	<package name="System" namespace="/System" extends="struts-default">
+		<action name="pagesLogin" class="AdminAction" method="pagesLogin">
+			<result name="success">../era/../HomePages/Main.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selRoles" class="RolesAction" method="selRoles">
+			<result name="success">../era/../HomePages/RolesPages.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="pagesRoles" class="RolesAction" method="pagesRoles">
+			<result name="success">../era/../HomePages/RolesAdd.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addRoles" class="RolesAction" method="addRoles">
+			<result name="success">../era/../HomePages/RolesPages.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="pageRolesAdd" class="RolesAction" method="pageRolesAdd">
+			<result name="success">../era/../HomePages/Addrole.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="rolesAdd" class="RolesAction" method="rolesAdd">
+			<result name="success">../era/../HomePages/RolesPages.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="UserLoginOut" class="AdminAction" method="UserLoginOut">
+			<result name="success">../era/../Index.jsp</result>
+		</action>
+		<action name="adminUser" class="AdminAction" method="selAdmin">
+			<result name="success">../era/../HomePages/Admin.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delAdmin" class="AdminAction" method="delAdmin">
+			<result name="success">../era/../HomePages/Admin.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addPages" class="AdminAction" method="addPages">
+			<result name="success">../era/../HomePages/AddAdmin.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selUser" class="UserAction" method="selUser">
+			<result name="success">../era/../HomePages/User.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delUser" class="UserAction" method="delUser">
+			<result name="success">../era/../HomePages/User.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selSeller" class="SellerAction" method="selSeller">
+			<result name="success">../era/../HomePages/Seller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delSeller" class="SellerAction" method="delSeller">
+			<result name="success">../era/../HomePages/Seller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selProduct" class="ProductAction" method="selProduct">
+			<result name="success">../era/../HomePages/Product.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="sellerPage" class="SellerAction" method="sellerPage">
+			<result name="success">../era/../HomePages/AddSeller.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selCollect" class="CollectAction" method="selCollect">
+			<result name="success">../era/../HomePages/Collect.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delCollect" class="CollectAction" method="delCollect">
+			<result name="success">../era/../HomePages/Collect.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selComment" class="CommentAction" method="selComment">
+			<result name="success">../era/../HomePages/Comment.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selCity" class="CityAction" method="selCity">
+			<result name="success">../era/../HomePages/City.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delCity" class="CityAction" method="delCity">
+			<result name="success">../era/../HomePages/City.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addCity" class="CityAction" method="addCity">
+			<result name="success">../era/../HomePages/City.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addCityPage" class="CityAction" method="addCityPage">
+			<result name="success">../era/../HomePages/AddCity.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="selMarket" class="MarketAction" method="selMarket">
+			<result name="success">../era/../HomePages/Market.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="delMarket" class="MarketAction" method="delMarket">
+			<result name="success">../era/../HomePages/Market.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+		<action name="addMarketPage" class="MarketAction" method="addMarketPage">
+			<result name="success">../era/../HomePages/AddMarket.jsp</result>
+			<result name="error">../era/../Index.jsp</result>
+		</action>
+	</package>
+
+	<package name="news" namespace="/news" extends="json-default">
+		<action name="adminLogin" class="AdminAction" method="adminLogin">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="addAdmin" class="AdminAction" method="addAdmin">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		
+		
+	</package>
+
+	<package name="dataExchange" namespace="/dataExchange" extends="json-default">
+		<action name="loginUserInfo" class="UserAction" method="loginUserInfo">
+			<result type="json"></result>
+		</action>
+		<action name="registerUserInfo" class="UserAction" method="registerUserInfo">
+			<result type="json"></result>
+		</action>
+		<action name="getNewsDetail" class="NewsDetailsAction" method="getNewsDetail">
+			<result type="json"></result>
+		</action>
+		<action name="getCity" class="CityAction" method="getCity">
+			<result type="json"></result>
+		</action>
+		<action name="getCommentList" class="CommentAction" method="getCommentList">
+			<result type="json"></result>
+		</action>
+		<action name="selMark" class="MarketAction" method="selMark">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getSellerList" class="SellerAction" method="getSellerList">
+			<result type="json"></result>
+		</action>
+		<action name="getSellerListInfo" class="SellerAction" method="getSellerListInfo">
+			<result type="json"></result>
+		</action>
+		<action name="putComment" class="CommentAction" method="putComment">
+			<result type="json"></result>
+		</action>
+		<action name="getComment" class="CommentAction" method="getComment">
+			<result type="json"></result>
+		</action>
+		<action name="countComment" class="CommentAction" method="countComment">
+			<result type="json"></result>
+		</action>
+		<action name="putCollect" class="CollectAction" method="putCollect">
+			<result type="json"></result>
+		</action>
+		<action name="delCollect" class="CollectAction" method="delCollect">
+			<result type="json"></result>
+		</action>
+		<action name="getCollect" class="CollectAction" method="getCollect">
+			<result type="json"></result>
+		</action>
+		<action name="getClient" class="ClientAction" method="getClient">
+			<result type="json"></result>
+		</action>
+		<action name="getConvenient" class="ConvenientAction" method="getConvenient">
+			<result type="json"></result>
+		</action>
+		<action name="getConvenientDetail" class="ConvenientDetailAction" method="getConvenientDetail">
+			<result type="json"></result>
+		</action>
+		<action name="getMarketList" class="MarketAction" method="getMarketList">
+			<result type="json"></result>
+		</action>
+		<action name="putBackMessage" class="BackmessageAction" method="putBackMessage">
+			<result type="json"></result>
+		</action>
+		<action name="checkVersion" class="CheckVersionAction" method="checkVersion">
+			<result type="json"></result>
+		</action>
+		<action name="getProduct" class="ProductAction" method="getProduct">
+			<result type="json"></result>
+		</action>
+		<!-- 第二版本更新 2013.07.05 -->
+		<!-- 1、查询新闻导航标题新闻 -->
+		<action name="getHeadNews" class="NewsDetailsAction" method="getHeadNews">
+			<result type="json"></result>
+		</action>
+		<action name="registerUser" class="UserAction" method="registerUser">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getArea" class="CityAction" method="getArea">
+			<result type="json"></result>
+		</action>
+		<action name="getMarketSeller" class="MarketAction" method="getMarketSeller">
+			<result type="json"></result>
+		</action>
+		<action name="sms" class="ProductAction" method="sms">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="codeSms" class="ProductAction" method="codeSms">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="addLotteryDraw" class="LotteryDrawAction" method="addLotteryDraw">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="selMyLotteryDraw" class="LotteryDrawAction" method="selMyLotteryDraw">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="activities" class="LotteryDrawAction" method="activities">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="winning" class="LotteryDrawAction" method="winning">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="issue" class="LotteryDrawAction" method="issue">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 今天还有几次抽奖机会 -->
+		<action name="myLackLotter" class="LotteryDrawAction" method="myLackLotter">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="addTock" class="LotteryDrawAction" method="addTock">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="selSellerTui" class="LotteryDrawAction" method="selSellerTui">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="selRecommend" class="LotteryDrawAction" method="selRecommend">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="selRetrieve" class="LotteryDrawAction" method="selRetrieve">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="selRetrievePassWord" class="LotteryDrawAction" method="selRetrievePassWord">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="updaePassWord" class="LotteryDrawAction" method="updaePassWord">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="selRecommendType" class="LotteryDrawAction" method="selRecommendType">
+			<result type="json" name="success">
+				<param name="root">map</param>
+			</result>
+		</action>
+			</package>
+</struts>

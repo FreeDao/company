@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    <struts> 
+	<constant name="struts.multipart.maxSize" value="999999999"/>
+     <!-- 基本的配置内容 --> 
+
+ <package name="default" extends="struts-default">
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="exception">/exception.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+            <exception-mapping result="error" exception="java.sql.SQLException"></exception-mapping>
+        </global-exception-mappings>
+     </package>
+     
+     <package name="strust" extends="default" namespace="/bg">
+     	<!-- 用户类 -->
+     	<action name="user" class="bgUserAction" > 
+     		<result name="index">/WEB-INF/main.jsp</result>
+	       <result name="fail">/index.jsp</result>
+	       <result name="login">/WEB-INF/main.jsp</result>
+	       <result name="userList">/WEB-INF/account/index.jsp</result>
+	       <result name="version">/WEB-INF/version/index.jsp</result>
+	       <result name="feedBackList">/WEB-INF/feedBack/index.jsp</result>
+	     </action> 
+	     
+	     <!-- 商业信息 -->
+	     <action name="business" class="businessAction" > 
+	       <result name="index">/WEB-INF/business/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/business/addOrEdit.jsp</result>
+	     </action> 
+	     <!-- 特药企业 -->
+	     <action name="company" class="companyAction" > 
+	       <result name="index">/WEB-INF/company/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/company/addOrEdit.jsp</result>
+	     </action> 
+	       <!-- 展览展会 -->
+	     <action name="exhibition" class="exhibitionAction" > 
+	        <result name="index">/WEB-INF/exhibition/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/exhibition/addOrEdit.jsp</result>
+	     </action> 
+	       <!-- 招标信息 -->
+	     <action name="invitation" class="invitationAction" > 
+	        <result name="index">/WEB-INF/invitation/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/invitation/addOrEdit.jsp</result>
+	     </action> 
+	       <!-- 招聘信息 -->
+	     <action name="recruit" class="recruitAction" > 
+	        <result name="index">/WEB-INF/recruit/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/recruit/addOrEdit.jsp</result>
+	     </action> 
+	       <!-- 求职信息 -->
+	     <action name="job" class="jobAction" > 
+	        <result name="index">/WEB-INF/job/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/job/addOrEdit.jsp</result>
+	     </action> 
+	      <!-- 药房动态信息 -->
+	     <action name="pharmacy" class="pharmacyAction" > 
+	        <result name="index">/WEB-INF/pharmacy/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/pharmacy/addOrEdit.jsp</result>
+	     </action> 
+	      <!-- 行业动态信息 -->
+	     <action name="trade" class="tradeAction" > 
+	        <result name="index">/WEB-INF/trade/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/trade/addOrEdit.jsp</result>
+	     </action> 
+	      <!-- 法律法规信息 -->
+	     <action name="law" class="lawAction" > 
+	        <result name="index">/WEB-INF/law/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/law/addOrEdit.jsp</result>
+	     </action> 
+     </package>
+     
+     <!-- package元素的name属性指的是包名，extends属性表示继承struts-default这个包 --> 
+     <package name="json" extends="json-default" namespace="/in"> 
+	   <action name="user" class="userAction"> 
+		   <result type="json" name="success">
+		       <!-- 这里指定将被Struts2序列化的属性，该属性在action中必须有对应的getter方法 -->
+		       <param name="root">map</param>
+		   </result>
+      </action> 
+      
+       <action name="sel" class="queryAction"> 
+		   <result type="json" name="success">
+		       <!-- 这里指定将被Struts2序列化的属性，该属性在action中必须有对应的getter方法 -->
+		       <param name="root">map</param>
+		   </result>
+      </action> 
+      
+     </package> 
+    </struts> 

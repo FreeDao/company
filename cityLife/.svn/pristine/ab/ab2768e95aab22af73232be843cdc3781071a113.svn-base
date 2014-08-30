@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>detail.html</title>
+	
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+    
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    
+	<link rel="stylesheet" type="text/css" href="swipe/css/swipe.css">
+	<script src="swipe/js/swipe.js"></script>
+
+	<script type="text/javascript" src="js/requestParam.js"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
+	
+  </head>
+  
+  <body onload="detailInit()">
+  
+  <div class=topBar >
+  <header>
+	<a id="back"  class=return onclick="window.history.back();" ><img src="img/return.png" width="40"/></a>
+	<a href="index.html" class=comment ><img src="img/comment.png" width="40"/></a>
+	<a href="index.html" class=share ><img src="img/share.png" width="40"/></a>
+  </header>
+  <section class=title >
+  	<div class=head >
+	  	<div class=left >
+	  		<img id="logo" alt="" src="" width='81' height='62' />
+	  	</div>
+	  	<div class=right >
+		  	<h3 id="title" ></h3>
+		  	<div class=star ><img src="img/star_solid.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"></div>
+		  	<div class='bottom' ><a class=phoneBg ><span class=phone id="phone" ></span></a>优惠：<span class=preferen id="preferen"></span></div>
+	  	</div>
+  	</div>
+  </section>
+  </div>
+  <div class=content id=content >
+  <div class=address ><div><img src='img/arrow_right.png' width='4' /><img src="img/address.png" width="20"><span id="address"></span></div></div>
+  <div class=searchway ><div><img src='img/arrow_right.png' width='4' /><img src="img/searchway.png" width="20"><span>路线查询</span></div></div>
+  <section class=service >
+  	<h4>产品服务：</h4>
+  	<p id="product"></p>
+  	<div id="productImgs" onclick="showImg(0)"></div>
+  </section>
+  <section class=brief >
+  	<h4>商家介绍：</h4>
+  	<p id="brief"></p>
+  	<div id="briefImgs" onclick="showImg(1)" ></div>
+  </section>
+  <span class=comment_title >评论：</span>
+  <img src="img/comment_line.png" width="100%" />
+  
+  <section class=comment_bottom >
+  	<div class=comment_content >
+  	<div ><img src="img/star_solid.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12">&nbsp;</div>
+  	<p>地方大所发生的</p>
+  	<span>2013-10-03 18:30:18</span>
+  	</div>
+  	<img src="img/comment_line_cutoff.png" width="100%" />
+  </section>
+  
+  </div>
+  
+  
+   <div class=imgChange id=imgChange onclick="hideImg()">
+	<div class="addWrap">
+		<div class="swipe" id="mySwipe">
+	        <div class="swipe-wrap" id="swipe-wrap" style="width: 100%;">
+	        </div>
+	    </div>
+	</div>
+  </div>
+  </body>
+   
+</html>

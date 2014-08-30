@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="utf-8" />
+<title>翻拍抽奖</title>
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+	name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+
+<LINK href="css/index.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/index.js" ></script>
+
+</head>
+<body onload="init()">
+<div class=content >
+	<img alt="" src="img/dt_top.gif" class=imgTop >
+	<div class=center id=center >
+		<div class=cards >
+			<div id=oneLine >
+				<div class=cj >
+				<div class=rq onclick="fp(this)" >
+					<img  src="img/p2.png" class=one id=one /> 
+				</div>
+				</div>
+				<div class=cj>
+				<div class=rq onclick="fp(this)">
+					<img  src="img/p2.png" class=one /> 
+				</div>
+				</div>
+				<div class=cj>
+				<div class=rq onclick="fp(this)">
+					<img  src="img/p2.png" class=one /> 
+				</div>
+				</div>
+				<div class=cj>
+				<div class=rq onclick="fp(this)">
+					<img  src="img/p2.png" class=one /> 
+				</div>
+				</div>
+			</div>
+			
+			<div id=twoLine >
+				<div class=cj >
+				<div  class=rq onclick="fp(this)">
+					<img  src="img/p2.png" class=one /> 
+				</div>
+				</div>
+				<div class=cj >
+				<div class=rq onclick="fp(this)">
+					<img  src="img/p2.png" class=one /> 
+				</div>
+				</div>
+				<div class=cj>
+				<div class=rq onclick="fp(this)">
+					<img  src="img/p2.png" class=one /> 
+				</div>
+				</div>
+				<div class=cj>
+				<div class=rq onclick="fp(this)">
+					<img  src="img/p2.png" class=one /> 
+				</div>
+				</div>
+			</div>
+			<div id=share >
+			<a id="test" class="shareto_button" ><img id=shareImg src="img/an.png" /></a>
+			<script type="text/javascript" src="http://s.shareto.com.cn/js/shareto_button.js" charset="utf-8"></script>
+			</div>
+		</div>
+		<img class=imgCenter id=imgCenter src="img/dt_center.gif" >
+	</div>
+	<img src="img/bottom_top.png" width="100%" style="margin-top: -5px;" />
+	<div class=bottom  >
+		<div class=cententBottom >
+			<section>
+				<h3 style="margin-top: 0;">活动规则</h3>
+				<p>1.回复XX进入活动</p>
+				<p>2.每次翻两张牌，想通即中奖，每天有6次机会哦！</p>
+				<p>3.根据提示分享给好友，每次分享增加3次翻拍机会</p>
+				<p>4.送出XXX XX台，XXXX台，XXXX,迅雷VIP卡</p>
+			</section>		
+			<section>
+				<h3>活动时间</h3>
+				<p>2014年3月18日-3月23日</p>
+			</section>		
+			<section>
+				<h3>温馨提示</h3>
+				<p>1.翻到两张想通的牌后，会提示您提交个人信息，如没有翻到想通的牌，请重新翻拍</p>
+				<p>2.中奖礼品会在15个工作日内寄送，请耐心等候</p>
+				<p>3.亲，试试你的手气</p>
+			</section>
+		</div>		
+	</div>
+	<img alt="" src="img/bottom.png" style="margin-top: -7px;" width="100%" />
+	<!-- <div style="position: absolute;width: 100%;max-width: 640px;" ><img alt="" src="img/bottom_bottom_right.png" width="20%" style="position: absolute; right: 30px;top:-50px;" ></div><div style="margin-top: -7px;" ><img alt="" src="img/bottom_bottom_left.png" width="100%" ></div> -->
+</div>
+
+<script type="text/javascript">
+var props = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),prop;
+var total = 1 , clickNum = 0;
+var lastImg,lastImgSrc,lastCard;
+var protectTime = 0;
+
+var test = document.getElementById("test");
+
+test.onclick = function(){};
+
+function fp(t){
+	
+	if(protectTime == 1){
+		return;
+	}
+	
+	if(lastCard == t){
+		return;
+	}
+	
+	if(total > 3){
+		alert("抱歉你的抽奖次数已用完！");
+		return;
+	}
+	
+	if(clickNum >= 2){
+		return;
+	}else{
+	
+		var tempImgs = ["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png"];
+		var ramdomIndex = Math.floor(Math.random()*(tempImgs.length-1));
+		var one = document.getElementById("one");
+		var oneWidth = one.width;
+		var oneHeigth = one.heigth;
+		
+		var temp_img = document.createElement("img");
+		temp_img.src = tempImgs[ramdomIndex];
+		temp_img.width = oneWidth;
+		temp_img.heigth = oneHeigth;
+		temp_img.className = "two";
+		
+		
+		if(clickNum == 0){
+			lastImg = temp_img;
+			lastImgSrc = temp_img.src;	
+			lastCard = t;
+		}else{
+			setTimeout(function(){
+				if(lastImgSrc == temp_img.src){
+					alert("恭喜你！中奖了！");
+					window.location.href = "info.html";
+				}else{
+					if(total == 3){
+						alert("很遗憾未中奖，你的机会已用完！");
+						total++;
+					}else{
+						alert("很遗憾未中奖，再接再厉！还有"+(3-total++)+"次机会！");
+						protectTime = 1;
+						setTimeout(function(){
+							protectTime = 0;
+						},1000);
+					}
+					clickNum = 0;
+					lastCard.style[prop] = "rotateY(0deg)";
+					t.style[prop] = "rotateY(0deg)";
+					lastCard = null;
+					
+					setTimeout(function(){
+						t.removeChild(t.childNodes[t.childNodes.length-1]);
+						lastImg.parentNode.removeChild(lastImg);
+					},500);
+					
+					/* setTimeout(function(){
+						
+						var imgWidth ;
+						var twos = document.getElementsByTagName("img");
+						
+						var i = 0;
+						var tempImgs = ["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png","img/2.png","img/5.png"];
+						var tempCards = changeSort(tempImgs);
+						var divs = document.getElementsByTagName("div");
+						
+						for(var index in twos){
+							if(twos[index].className == "two"){
+								imgWidth = twos[index].width;
+								twos[index].className == "three";
+							}
+						}
+						
+						for(var index in twos){
+							if(twos[index].className == "three"){
+								twos[index].parentNode.removeChild(twos[index]);
+							}
+						}
+							
+						
+						for(var index in divs){
+							if(divs[index].className == "rq" ){
+								var img = document.createElement("img");
+								img.src = tempCards[i++];
+								img.width = imgWidth;
+//								img.style.paddingTop = (imgHeight/2-23)+"px";
+//								img.style.paddingRight = (imgWidth/2-18)+"px";
+								img.className = "two";
+								divs[index].appendChild(img);
+							}
+						}
+						
+					},1000); */
+					
+					
+					
+					/* var tempDivs = document.getElementsByTagName("div");
+					for(var index in tempDivs){
+						if(tempDivs[index].className == "rq" && lastCard != tempDivs[index] && t != tempDivs[index] ){
+							tempDivs[index].style[prop] = "rotateY(-180deg)";
+							tempDivs[index].style.opacity = 0.8;
+							tempDivs[index].style.mozOpacity = 0.8;
+							tempDivs[index].style.khtmlOpacity = 0.8;
+							tempDivs[index].style.opacity = 0.8;
+						}
+						
+					} */ 
+					
+				}
+			},1000);
+			
+		}
+		
+		clickNum++;
+	}
+	
+	for(var i = 0, l = props.length; i < l; i++) {
+		if(typeof t.style[props[i]] !== "undefined") {
+		    prop = props[i];
+		    break;
+		}
+	}
+	
+	t.style[prop] = "rotateY(-180deg)";
+	setTimeout(function(){
+		t.appendChild(temp_img);
+	},500);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cj.html</title>
+	
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />	
+	
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	 
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+    <%--<link rel="stylesheet" type="text/css" href="luck.css">
+    
+    --%>
+    
+    <style>
+    
+    body{
+    	margin: 0 auto;
+    	max-width: 700px;
+    	padding: 0;
+    }
+    
+    h1{
+    	color: rgb(36,151,118);
+    }
+    
+    h1 img{
+    	margin: 0 5px;
+    	float: left;
+    }
+    
+    p{
+    	color: rgb(157,157,157);
+    	margin: 0 5px;
+    }
+    </style>
+  </head>
+  
+  <body>
+  	<section>
+  		<img alt="" src="img/web_07.jpg" width="100%">
+  		
+  		<h1><img alt="" src="img/web_007.png" width="18px">重庆鹏优信息技术有限公司</h1>
+  		
+  		<p>重庆鹏优信息技术有限公司(简称鹏优信息)成立于2009年，是中国最具探索与开拓精神的移动互联网公司。鹏优信息专注服务于移动电子商务领域，致力于为众多的中小型企业移动信息化进程提供优质服务，被称为中国移动互联网的移动应用专家。 重庆鹏优信息技术有限公司总部位于中国重庆，分公司遍布于中国成都、太原、西安、银川、新疆等地。充满激情的开发团队，对互联网潮流的敏锐洞悉，多个项目的独立研究与开发，锻造了鹏优独特的高度前瞻、关注细节、高效执行的团队运作模式。我们紧紧围绕客户的需求持续创新，追求在企业信息化领域实现客户梦想，改善客户的信息化水平，提升客户体验，为客户创造最大的商业价值。</p>
+  	
+  	</section>
+  
+  </body>
+</html>
+

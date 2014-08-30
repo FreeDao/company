@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>地图</title>
+	
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">  
+body, html, #allmap {width: 100%;height: 100%;overflow: hidden;hidden;margin:0;}  
+
+header {
+	z-index:9999999;
+	max-width:700px;
+	position:fixed;
+	width:100%;
+	min-height: 45px;
+	background-image: url("img/bg_title.png");
+}
+
+header a {
+	float: left;
+}
+
+header h3 {
+	margin: 0 auto;
+	padding-top: 13px;
+	font-size: 20px;
+	color: white;
+	width: 100px;
+	text-align: center;
+}
+
+</style>  
+  </head>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZKZnABzs5B9yFhMd8VLgfeZj"></script>
+  <script type="text/javascript" src="js/requestParam.js"></script>
+   
+  <body onload="myInit()">
+   <header>
+	<a onclick="window.history.back();"><img src="img/return.png" width="40"/></a>
+	<h3>地图</h3>
+	</header>
+  
+    <div id="allmap"  ></div>
+    <script type="text/javascript">  
+    	var locationLog,locationDim;
+    	 var log = getQueryStringByName("log");
+	    var dim = getQueryStringByName("dim");
+	    var type = getQueryStringByName("type");
+		function myInit(){
+			  if (navigator.geolocation)
+			    {
+			    navigator.geolocation.getCurrentPosition(showPosition);
+			    
+			    }
+			  else{
+			  	alert("你的浏览器不支持定位！");
+			  }
+		  }
+		function showPosition(position)
+		  {
+			  locationLog = position.coords.longitude;
+			  locationDim = position.coords.latitude;
+			  
+			var map = new BMap.Map("allmap");
+			map.centerAndZoom(new BMap.Point(locationLog, locationDim), 11);
+			
+			if(type == 1){
+				var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+				driving.search(new BMap.Point(locationLog, locationDim), new BMap.Point(log, dim));    
+			}else{
+				var transit = new BMap.TransitRoute(map, {
+				  renderOptions: {map: map}
+				});
+				transit.search(new BMap.Point(locationLog, locationDim), new BMap.Point(log, dim));
+			}
+		  }
+    
+	  
+		
+	</script> 
+  </body>
+</html>

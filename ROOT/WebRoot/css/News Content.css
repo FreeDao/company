@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+#xw1{ margin-left:15px; float:left; width:200px;}
+#xw2{ margin-left:573px; float:left; width:200px; margin-top:5px;}
+#xw2 a{ float:left; font-size:13px; color:#9d9d9d; margin-left:5px;}
+.xw1{ color:#249776; font-size:18px; font-family:"方正韵动中黑简体";}
+.comp{ color:#9d9d9d; font-size:15px; font-family:"方正韵动中黑简体";}
+.newspic{ width:982px; height:203px; margin:0px auto; background:url(../images/newspic.jpg);}
+.newstitle{ width:982px; height:30px; margin:0px auto;}
+.newstitle div{ float:left; width:auto; height:20px; margin-top:5px;}
+.quanwen{ font-size:13px; color:#999; font-family:"方正韵动中黑简体";}
+.Text{ width:982px; height:auto; margin:0px auto;}
+.Market{ font-size:18px; color:#555; font-family:"方正韵动中黑简体"; margin:0px auto; width:auto; height:auto; margin-top:10px; text-align:center;}
+.Market a{ margin:0px auto;}
+.zhengwen{ width:982px; height:auto; margin-top:10px;}
+.zhengwen a{ font-size:13px; color:#9d9d9d; font-family:"宋体"; line-height:18px;}
+.title{ width:978px; height:27px; margin:0px auto; margin-top:100px;}
+.title a{ color:#666; font-size:15px; font-family:"微软雅黑"; text-align:right; line-height:27px; margin-left:5px; padding:0px; margin:0px;}
+.wenzi{ width:800px; margin:0px auto; margin-top:10px;}

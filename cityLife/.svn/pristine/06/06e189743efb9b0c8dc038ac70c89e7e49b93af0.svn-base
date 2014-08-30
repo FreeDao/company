@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>detail.html</title>
+	
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+    
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+
+  </head>
+  
+  <body>
+  <header>
+	<a href="index.html" class=return ><img src="img/return.png" width="40"/></a>
+	<a href="index.html" class=comment ><img src="img/comment.png" width="40"/></a>
+	<a href="index.html" class=share ><img src="img/share.png" width="40"/></a>
+  </header>
+  <section class=title >
+  	<div class=head >
+	  	<div class=left >
+	  		<img alt="" src="http://api.pymob.cn:8080/City/qrurl/a20130829144853.jpg" width='81' height='62' />
+	  	</div>
+	  	<div class=right >
+		  	<h3>卡思造型</h3>
+		  	<div class=star ><img src="img/star_solid.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"><img src="img/star_empty.png" width="12" height="12"></div>
+		  	<div class='bottom' ><span class=phoneBg ><span class=phone >13452084671</span></span>优惠：<span class=preferen >%</span></div>
+	  	</div>
+  	</div>
+  </section>
+  <div><img src="img/address.png" >擦擦苏打水</div>
+  <div><img src="img/searchway.png" >啊倒萨发斯蒂芬</div>
+  
+  </body>
+</html>

@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0;}
+body{ font: 12px/1.5em Arial,"Microsoft yahei",\5b8b\4f53;}
+.login{ background:url(../images/logins.png) 0 0 no-repeat; width:736px; height:505px; margin:100px auto; overflow:hidden;}
+.form{ width:310px; height:200px; margin:216px 0 0 225px;}
+.username{ line-height:30px; display:block; width:80px; margin-top:-20px; margin-left:200px;}
+.form table{ width:310px;}
+.form input{ line-height:30px; padding:2px 5px; height:24px; width:170px; border:1px solid #DBDBDB; box-shadow:inset 1px 1px 2px rgba(0,0,0,0.4); margin-left:2px; font-family:Arial, Helvetica, sans-serif;}
+.form .button{width:233px; height:41px; background:url(../images/loginbtn.png) 0 0 no-repeat; border:0 none; margin-top:20px; cursor:pointer;}
+.foot{ text-align:center; height:50px;}

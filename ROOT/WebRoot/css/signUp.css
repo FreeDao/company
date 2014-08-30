@@ -1,0 +1,48 @@
+.input-medium{
+	height: 20px;
+}
+
+.content{
+	margin: 0 auto;
+	height:1400px;
+	width:1005px;
+	background-image: url("../img/signUp.jpg");
+}
+
+.myForm{
+	padding: 940px 0 0 40px;
+}
+
+.control-group label{
+	width: 110px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+#down{
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.citybtn{
+	width: 137px;
+}
+
+.mySubmit{
+	margin: 66px 0 0 345px;
+}
+
+.mySubmit label {
+	color: white;
+	text-align:center;
+	padding-top:15px;
+	font-size: 25px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	width: 220px;
+	height: 38px;
+}
+
+.dropdown-menu li a{
+	text-align: center;
+	padding-right: 30px;
+}

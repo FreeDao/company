@@ -1,0 +1,189 @@
+/****** 下拉刷新、上拉加载更多的样式********/
+body {
+	font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53',
+		sans-serif;
+}
+
+#pulldown,#pullup {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	font-size: 14px;
+	color: #888;
+}
+
+#pulldown .pulldown-icon,#pullup .pullup-icon {
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(../img/arrow.png) 0 0 no-repeat;
+	-webkit-background-size: 40px 80px;
+	background-size: 40px 80px;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 250ms;
+}
+
+#pulldown .pulldown-icon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pullup .pullup-icon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+#pulldown.flip .pulldown-icon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+#pullup.flip .pullup-icon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pulldown.loading .pulldown-icon,#pullup.loading .pullup-icon {
+	background-position: 0 100%;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-webkit-transition-duration: 0ms;
+	-webkit-animation-name: loading;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@
+-webkit-keyframes loading {from { -webkit-transform:rotate(0deg)translateZ(0);
+	
+}
+
+to {
+	-webkit-transform: rotate(360deg) translateZ(0);
+}
+
+}
+dd {
+	border-bottom: 1px solid #ccc;
+	margin-left: 0px;
+}
+
+dd .imgDiv img {
+	margin: 5px;
+	-webkit-border-radius: 5px;
+	/* box-shadow:2px 2px 2px grey; */
+}
+
+dd .lineDiv {
+	width: 100%;
+}
+
+dd .imgDiv {
+	float: left;
+	height: 72px;
+}
+
+dd .contentDiv {
+	height: 72px;
+	margin-right: 8px;
+}
+
+.quotation span,.sign{
+	display:block;
+}
+
+.quotation span{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 60%;
+}
+
+.sign{
+	color:black;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 30%;
+}
+
+.sign span{
+	font-size: 17px;
+	color:red;
+}
+
+dd h4 {
+	float: left;
+	margin: 0px;
+	display:block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 50%;
+	font-size: 15px;
+}
+
+dd span {
+	color: #999;
+}
+
+dd .titleDiv img {
+	margin: 0;
+}
+
+dd .titleDiv {
+	padding-top: 5px;
+	height: 22px;
+}
+
+dd .quotation {
+	height: 18px;
+}
+
+dd .infoDiv {
+	color: black;
+	height: 22px;
+}
+
+.titleDiv span {
+	float: right;
+}
+
+.quotation img {
+	margin-top: 3px;
+	float: right;
+}
+
+.phoneSpan {
+	float: right;
+	width: 100px;
+	height: 22px;
+	background-image: url("../img/phone.png");
+	background-repeat: no-repeat;
+	background-size: 100px 22px;
+}
+
+.phoneSpan span {
+	margin: 2px; display : block;
+	text-align: right;
+	color: white;
+	display: block;
+}
+
+header {
+	min-height: 45px;
+	background-image: url("../img/bg_title.png");
+}
+
+header a {
+	float: left;
+}
+
+header h3 {
+	margin: 0 auto;
+	padding-top: 8px;
+	font-size: 20px;
+	color: white;
+	width: 100px;
+	text-align: center;
+}

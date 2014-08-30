@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+.erweima{ width:1005px; margin:0px auto; height:505px;}
+.erweim{ width:978px; height:505px; margin:0px auto;}
+.erweim1{ float:left; width:489px; height:505px;}
+.erweim2{ float:left; width:489px; height:505px;}
+.androidma{ width:357px; height:410px; margin:0px auto;}
+.ma{ width:357px; height:355px; background:url(../images/1213.jpg); margin-top:10px;}
+.ma img{ border:1px solid:#000;}
+.img{ margin:0px auto; width:216px; height:216px; padding-top:60px;}
+.mb{ width:357px; height:355px; background:url(../images/12132.jpg); margin-top:10px;}
+.mb img{ border:1px solid:#000;}

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 所有action -->
+	<package name="System" namespace="/System" extends="struts-default">
+		<!-- 商户登录 -->
+		<action name="login" class="UserAction" method="login"></action>
+		<!-- 修改用户信息 -->
+		<action name="updatePass" class="UserAction" method="updatePass"></action>
+		<!-- 跳转到主页 -->
+		<action name="pageUser" class="UserAction" method="pageUser">
+			<result name="success">../SellerManage/../HomePages/Main.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 用户信息 -->
+		<action name="selPageUser" class="UserAction" method="selPageUser">
+			<result name="success">../SellerManage/../HomePages/Member.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 跳转到修改密码 -->
+		<action name="updatePassPage" class="UserAction" method="updatePassPage">
+			<result name="success">../SellerManage/../HomePages/ChangePass.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 跳转到修改个人信息 -->
+		<action name="updateMe" class="UserAction" method="updateMe">
+			<result name="success">../SellerManage/../HomePages/ChangeMe.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 跳转到查询个人信息 -->
+		<action name="selSeller" class="SellerAction" method="selSeller">
+			<result name="success">/HomePages/SellerMsg.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 跳转到修改商户信息 -->
+		<action name="updatesellerPage" class="SellerAction" method="updatesellerPage">
+			<result name="success">/HomePages/UpdateSeller.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!--修改商户信息 -->
+		<action name="updateSeller" class="SellerAction" method="updateSeller">
+			<result name="success">../SellerManage/../HomePages/UpdateSeller.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!--产品 -->
+		<action name="selProductNum" class="ProductAction" method="selProductNum">
+			<result name="success">../SellerManage/../HomePages/Product.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 删除产品 -->
+		<action name="delProduct" class="ProductAction" method="delProduct">
+			<result name="success">../SellerManage/../HomePages/Product.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 查询商户图片 -->
+		<action name="selImages" class="ProductAction" method="selImages">
+			<result name="success">../SellerManage/../HomePages/Images.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 删除商户图片 -->
+		<action name="delImages" class="ProductAction" method="delImages">
+			<result name="success">../SellerManage/../HomePages/Product.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 跳转到添加图片 -->
+		<action name="addImages" class="ProductAction" method="addImages">
+			<result name="success">../SellerManage/../HomePages/AddImages.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 添加图片 -->
+		<action name="addImagesPage" class="ProductAction" method="addImagesPage">
+			<result name="success">../SellerManage/../HomePages/AddImages.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 添加产品 -->
+		<action name="addProductPage" class="ProductAction" method="addProductPage">
+			<result name="success">../SellerManage/../HomePages/AddProduct.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 添加产品 -->
+		<action name="updateProductPage" class="ProductAction" method="updateProductPage">
+			<result name="success">../SellerManage/../HomePages/AddProduct.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 添加产品 -->
+		<action name="addProduct" class="ProductAction" method="addProduct">
+			<result name="success">../SellerManage/../HomePages/AddProduct.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 查看产品图片 -->
+		<action name="selProductImage" class="ProductAction" method="selProductImage">
+			<result name="success">../SellerManage/../HomePages/ProductImages.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 跳转到添加到产品图片 -->
+		<action name="addProductImagesPage" class="ProductAction" method="addProductImagesPage">
+			<result name="success">../SellerManage/../HomePages/AddProductImages.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!-- 跳转到添加到商户 -->
+		<action name="addSelectPage" class="SellerAction" method="addSelectPage">
+			<result name="success">../SellerManage/../HomePages/AddSeller.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		
+		<!-- 添加商户 -->
+		<action name="addSeller" class="SellerAction" method="addSeller">
+			<result name="success">../SellerManage/../HomePages/SellerMsg.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		
+		<!-- 删除商户 -->
+		<action name="delSeller" class="SellerAction" method="delSeller">
+			<result name="success">../SellerManage/../HomePages/SellerMsg.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		
+		
+		
+		<!--添加到产品图片 -->
+		<action name="addtiew" class="ProductAction" method="addtiew">
+			<result name="success">../SellerManage/../HomePages/AddProductImages.jsp</result>
+			<result name="error">../SellerManage/../Index.jsp</result>
+		</action>
+		<!--退出 -->
+		<action name="UserLoginOut" class="UserAction" method="UserLoginOut">
+			<result name="success">../SellerManage/../Index.jsp</result>
+		</action>
+	</package>
+</struts>

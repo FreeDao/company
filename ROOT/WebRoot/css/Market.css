@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.Maket{ width:978px; height:auto; margin:0px auto; margin-top:10px;}
+.Maket h1{ margin:0px; width:223px; height:30px;}
+.hengxian{ width:978px; height:23px; margin:0px auto; background:url(../images/MK2.jpg);}
+.shanghu{ width:978px; margin:0px auto; height:180px;}
+.shanghu dd{ float:left; width:227px; height:158px; margin:0px;}
+.shanghu dd li{ margin:0px; margin-top:10px; list-style-type:none;}
+.fanye{
+	width:978px; margin:0px auto; height:23px;}
+.fanye ul{ margin:0px auto; height:23px;}	
+.fanye li{ float:left; list-style-type:none; margin-left:10px; text-align:center; width:22px; height:22px; border:1px solid #999;}
+.fanye li a{ font-size:13px; line-height:22px; color:#666; font-family:"宋体";}
+.MerchantCategory{width:auto; height:24px;}      
+.MerchantCategory h1{ font-size:15px; color:#fff; line-height:24px; font-family:"方正中黑简体";}
+.MerchantCategory a{ padding:0px 10px; float:left; background-color:#333;}

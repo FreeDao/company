@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="blogtype" catalog="newera"
+		class="com.era.orm.BlogType">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="product" catalog="newera"
+		class="com.era.orm.Product">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="productcomment" catalog="newera"
+		class="com.era.orm.ProductComment">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="productstyle" catalog="newera"
+		class="com.era.orm.ProductStyle">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="producttype" catalog="newera"
+		class="com.era.orm.ProductType">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="shareproduct" catalog="newera"
+		class="com.era.orm.ShareProduct">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="user" catalog="newera" class="com.era.orm.User">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="userblog" catalog="newera"
+		class="com.era.orm.UserBlog">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="userblogrep" catalog="newera"
+		class="com.era.orm.UserBlogRep">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="userfriend" catalog="newera"
+		class="com.era.orm.UserFriend">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="usergroup" catalog="newera"
+		class="com.era.orm.UserGroup">
+		<primary-key>
+			<generator class="n"></generator>
+		</primary-key>
+	</table>
+	<table name="product" catalog="piaojutong"
+		class="com.era.orm.Product">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="activities" catalog="city"
+		class="com.era.orm.Activities">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="city" catalog="city" class="com.era.orm.City">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="area" catalog="city" class="com.era.orm.Area">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="market" catalog="city" class="com.era.orm.Market">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="busmarsetmanager" catalog="city"
+		class="com.era.orm.BusmarsetManager">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+<table name="seller" catalog="city" class="com.era.orm.Seller">
+	<primary-key>
+		<generator class="native"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

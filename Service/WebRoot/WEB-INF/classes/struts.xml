@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    <struts> 
+	<constant name="struts.multipart.maxSize" value="999999999"/>
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+     <!-- 基本的配置内容 --> 
+
+	<package name="default" extends="struts-default">
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="exception">/exception.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+            <exception-mapping result="error" exception="java.sql.SQLException"></exception-mapping>
+        </global-exception-mappings>
+     </package>
+
+	<package name="strust" extends="default" namespace="/bg">
+     	<!-- 用户 -->
+     	<action name="user" class="bgUserAction" > 
+     		<result name="index">/WEB-INF/main.jsp</result>
+	       <result name="fail">/index.jsp</result>
+	       <result name="login">/WEB-INF/main.jsp</result>
+	       <result name="logout">/index.jsp</result>
+	       <result name="AccountList">/WEB-INF/account/index.jsp</result>
+	       <result name="version">/WEB-INF/version/index.jsp</result>
+	       <result name="feedBackList">/WEB-INF/feedBack/index.jsp</result>
+	       <result name="addOrEditAccount">/WEB-INF/account/addOrEdit.jsp</result>
+	     </action> 
+	     
+	  <!--   餐饮信息  -->
+	     <action name="cate" class="bgCateAction" > 
+	       <result name="index">/WEB-INF/cate/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/cate/addOrEdit.jsp</result>
+	     </action> 
+	   <!--   服装信息-->
+	     <action name="clothing" class="bgClothingAction" > 
+	       <result name="index">/WEB-INF/clothing/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/clothing/addOrEdit.jsp</result>
+	     </action> 
+	     <!--  教育信息-->
+	     <action name="education" class="bgEducationAction" > 
+	       <result name="index">/WEB-INF/education/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/education/addOrEdit.jsp</result>
+	     </action>  
+	      <!--  娱乐信息-->
+	     <action name="entertainment" class="bgEntertainmentAction" > 
+	       <result name="index">/WEB-INF/entertainment/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/entertainment/addOrEdit.jsp</result>
+	     </action>  
+	      <!--  美容信息-->
+	     <action name="hairdressing" class="bgHairdressingAction" > 
+	       <result name="index">/WEB-INF/hairdressing/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/hairdressing/addOrEdit.jsp</result>
+	     </action>  
+	        <!--  租赁信息-->
+	     <action name="lease" class="bgLeaseAction" > 
+	       <result name="index">/WEB-INF/lease/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/lease/addOrEdit.jsp</result>
+	     </action>  
+	        <!--  医疗信息-->
+	     <action name="medicine" class="bgMedicineAction" > 
+	       <result name="index">/WEB-INF/medicine/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/medicine/addOrEdit.jsp</result>
+	     </action>  
+	         <!--  服务信息-->
+	     <action name="service" class="bgServiceAction" > 
+	       <result name="index">/WEB-INF/service/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/service/addOrEdit.jsp</result>
+	     </action>  
+	         <!--  旅游信息-->
+	     <action name="travel" class="bgTravelAction" > 
+	       <result name="index">/WEB-INF/travel/index.jsp</result>
+	       <result name="addOrEdit">/WEB-INF/travel/addOrEdit.jsp</result>
+	     </action>  
+	     <!-- 上传 -->
+	     <action name="upload" class="bgUploadAction" > 
+	    	<result name="index">/WEB-INF/test.jsp</result>  
+	     	<result name="success">/WEB-INF/upload.jsp</result>  
+	     </action>
+     </package>
+
+     <!-- package元素的name属性指的是包名，extends属性表示继承struts-default这个包 --> 
+     <package name="json" extends="json-default" namespace="/in"> 
+      
+      <action name="query" class="queryAction"> 
+		   <result type="json" name="success">
+		       <!-- 这里指定将被Struts2序列化的属性，该属性在action中必须有对应的getter方法 -->
+		       <param name="root">map</param>
+		   </result>
+      </action> 
+      
+     </package> 
+     
+    </struts> 

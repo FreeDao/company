@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+
+#head{ width:100%; height:160px;}
+	.logo{ width:110px; height:120px;}
+/*		.logo1{ width:110px; height:120px;}*/
+	.logo2{ background:url(../images/t.png) repeat; width:100%; height:30px;}
+	
+	.mm{ width:785px; height:30px; border:1px #AEF7DF solid; margin-left:5px; background:#F7FFFE;}
+		.ll{ width:200px; height:20px; margin-top:5px; margin-left:10px;}
+		.nn{ width:200px; height:20px; margin-top:-20px; margin-left:580px;}
+#main{ width:800px; height:960px; margin:auto; padding:0px; margin-top:-160px; box-shadow: #666 0px 0px 10px;behavior: url(/PIE.htc);
+-webkit-border-radius: 8px;
+
+-moz-border-radius: 8px;
+
+border-radius: 8px;
+
+-webkit-box-shadow: #666 0px 0px 10px;
+
+-moz-box-shadow: #666 0px 0px 10px;}
+#middle{ width:800px; height:160px;}
+	.mhead{ width:500px; height:150px;}
+		.lhead{ padding-top:40px; float:left; height:80px;}
+		.nhead{ width:200px; float:left; font-size:36px; color:#096; font-family:"方正毡笔黑简体"; margin-top:50px;}
+	.rhead{ width:280px; height:150px; float:right; margin-top:-150px;}
+		.rrhead{ width:180px; float:right; font-size:12px; font-weight:bold; margin-top:70px;}
+.middle1{ width:790px; height:720px; margin-left:5px;}
+	.left{ height:695px; width:200px; border:1px #AEF7DF solid; float:left; background:#F7FFFE; margin-top:5px;}
+	/*左边菜单样式*/
+		.leftl{ width:180px; height:30px; text-align:left; font-weight:bold; margin-top:10px; font-size:14px; font-family:"宋体"; color:#F60; border:1px #AEF7DF solid; margin-left:10px; background:#FFF; }
+		.leftl img{ margin-top:5px;}
+		 .leftl a{ text-decoration:none;}
+		 .leftl a:link {color:#F60; text-decoration:none;}
+		 .leftl a:active:{color:#093; }
+		 .leftl a:visited {color:#F60;text-decoration:none;} 
+		 .leftl a:hover {color:#093;}
+		
+		.tu{ width:180px; height:30px; margin-left:10px; font-weight:bold; font-size:14px; font-family:"宋体"; color:#f60; border:1px #AEF7DF solid; text-align:left; margin-top:5px; background:#FFF;}
+		.tu img{ margin-top:5px;}
+		 .tu a{ text-decoration:none;}
+		 .tu a:link {color:#F60; text-decoration:none;}
+		 .tu a:active:{color:#093; }
+		 .tu a:visited {color:#F60;text-decoration:none;} 
+		 .tu a:hover {color:#093;}
+		
+		.circle{ list-style:none; font-size:12px; font-family:"宋体"; font-weight:bold;}
+		.circle li{ height:30px;}
+		 .circle a{ text-decoration:none;}
+		 .circle a:link {color:#F60; text-decoration:none;}
+		 .circle a:active:{color:#093;}
+		 .circle a:visited {color:#F60;text-decoration:none;} 
+		 .circle a:hover {color:#093;}
+		.circle img{ width:15px; height:15px;}
+		/*右边菜单样式*/
+		.right{ width:570px; height:750px; float:right;}
+		.member{ width:560px; height:25px; border:1px #AEF7DF solid; margin-top:5px; background:#F7FFFE; }
+		.member1{ width:100px; height:20px; font-size:16px; color:#F60; font-weight:bold; margin-top:5px; float:left; margin-left:5px;}
+		.member2{ width:100px; height:20px; font-size:12px; color:#999; margin-top:5px; float:right;}
+		 .member2 a{ text-decoration:none;}
+		 .member2 a:link {color:#999; text-decoration:none;}
+		 .member2 a:active:{color:#F60; }
+		 .member2 a:visited {color:#999;text-decoration:none;} 
+		 .member2 a:hover {color:#F60;}
+		 .member3{ width:150px; height:20px; margin-left:120px; margin-top:5px; font-size:12px;}
+		 	.mk{ width:60px; float:right;}
+			.qq{ width:90px; float:left;}
+		 /*会员中心*/
+		#totel{ width:570px; height:500px; float:right;}
+		 .ac{ width:560px; height:400px; border:1px #AEF7DF solid; margin-top:5px; background:#F7FFFE; }
+		 	.account{ width:400px; height:20px; font-size:16px; font-weight:bold; color:#666; padding-top:10px; margin-left:10px; padding-left:10px;}
+			.nmb{ width:120px; font-size:12px; margin-left:10px; height:30px; margin-top:10px;}
+			.alter{ width:80px; height:30px; font-size:12px; margin-top:-30px; margin-left:170px;}
+			.type{ width:150px; margin-top:-30px; font-size:12px; margin-left:310px;}
+			.balance{ width:130px; font-size:12px; margin-left:10px; height:20px; margin-top:20px;}
+			.time{ width:220px; margin-left:310px; font-size:12px; margin-top:-20px;}
+			/*修改会员信息*/
+	#alls{ widows:570px; height:460px; margin-left:5px;}
+			.ad{ width:500px; height:90px;}
+				.aso{ width:100px; height:80px; margin-top:10px; margin-left:10px; }
+				.update{ width:120px; font-size:16px; color:#666; font-weight:bold; margin-top:-50px; margin-left:130px;}
+			.bg{ width:530px; height:360px; margin-left:20px;}
+			.bg table{ width:300px; height:250px; margin-left:100px;}
+			.bg table td{ font-size:12px;}
+			/*注册平台*/
+	#all1{  width:570px; height:500px; float:right;}	
+		.cen{ width:560px; height:170px; margin-top:5px; border:1px #AEF7DF solid; background:#F7FFFE;}
+			.fd{ width:70px; height:50px; margin-left:40px;}
+			.tc{ width:50px; height:30px; margin-top:-30px; margin-left:110px; color:#003; font-size:16px; font-weight:bold;}
+			.fg{ width:420px; height:100px; margin-left:80px;}
+			.fg table{ width:410px; height:90px; margin-left:5px; font-size:12px;}
+		.cen1{ width:560px; height:280px; margin-top:20px; border:1px #AEF7DF solid; background:#F7FFFE;}
+			.zl{ width:80px; height:30px; margin-top:-30px; margin-left:110px; color:#003; font-size:16px; font-weight:bold;}
+			.mn{ width:500px; height:220px;}
+			.mn table{ margin-left:55px; width:400px; height:200px; margin-top:5px;}
+			.mn table td{ font-size:12px;}
+			
+			/*平台管理*/
+	#all2{ width:570px; height:750px; float:right;}
+		.dc{ width:560px; height:250px; margin-left:5px; margin-top:5px; border:1px #AEF7DF solid; background:#F7FFFE;}
+			.fd{ width:70px; height:50px; margin-left:40px;}
+			.tc{ width:80px; height:30px; margin-top:-30px; margin-left:110px; color:#003; font-size:16px; font-weight:bold;}
+			.tt{ width:420px; height:200px; margin-left:80px;}
+			.tt table{ width:410px; height:200px; margin-left:5px; font-size:12px;}
+		.dc1{ width:560px; height:200px; margin-left:5px; margin-top:10px;}
+			.jc{ width:559px; height:30px; background:#ECFBFF; border:1px #AEF7DF solid;}
+				.pt{ width:550px; font-size:14px; color:#003; font-weight:bold; margin-left:10px; padding-top:5px; }
+			.jj{ width:559px; height:350px;}
+				.jj table{ margin-top:5px;}
+				.jj table td{ font-size:13px; color:#036; width:569px;  border:1px #CCC solid; text-align:center;}
+			.gg{ width:559px; height:30px; background:#ECFBFF; border:1px #AEF7DF solid;}
+				.gg table{ margin-left:100px;}
+				.dd{ float:right; margin-top:50px; font-size:12px; width:60px;}
+		  a{ text-decoration:none;}
+		  a:link {color:#F60; text-decoration:none;}
+		  a:active:{color:#093;}
+		  a:visited {color:#F60;text-decoration:none;} 
+		  a:hover {color:#093;}
+			/*录款记录*/
+	#all3{ width:570px; height:700px; float:right;}
+		.va{ width:560px; height:180px; margin-left:5px; margin-top:5px;}
+			.cc{ width:559px; height:30px; background:#ECFBFF; border:1px #AEF7DF solid;}
+				.pt{ width:550px; font-size:14px; color:#003; font-weight:bold; margin-left:10px; padding-top:5px; }
+			.ee{ width:559px; height:130px; background:#ECFBFF; border:1px #AEF7DF solid; margin-top:10px;}
+				.ee table{ width:550px; height:120px;}
+				.ee table td{ font-size:12px; color:#036;}
+			.ce{ width:559px; height:30px; margin-left:5px; border:1px #FC0 solid; background:#FFFFF4; font-size:20px; font-weight:bold; text-align:center; color:#003;}
+		.va1{ width:559px; height:460px; margin-left:5px;  margin-top:5px;}
+		.kk{ width:559px; height:420px;}
+				.kk table{ width:559px;}
+				.kk td{ font-size:13px; color:#036; border:1px #CCC solid;}
+		.aa{ idth:559px; height:30px; background:#ECFBFF; border:1px #AEF7DF solid;}
+				.aa table{ margin-left:170px;}
+				.dd{ float:right; margin-top:50px; font-size:12px; width:60px;}
+		  a{ text-decoration:none;}
+		  a:link {color:#F60; text-decoration:none;}
+		  a:active:{color:#093;}
+		  a:visited {color:#F60;text-decoration:none;} 
+		  a:hover {color:#093;}
+			
+			/*消费记录*/
+	#all4{ width:570px; height:500px; float:right;}
+			.c{ width:570px; height:180px; margin-left:5px; margin-top:5px;}
+			.cc{ width:559px; height:30px; background:#ECFBFF; border:1px #AEF7DF solid;}
+				.pt{ width:550px; font-size:14px; color:#003; font-weight:bold; margin-left:10px; padding-top:5px; }
+			.ee{ width:559px; height:130px; background:#ECFBFF; border:1px #AEF7DF solid; margin-top:10px;}
+				.ee table{ width:550px; height:120px;}
+				.ee table td{ font-size:12px; color:#036;}
+			.ce{ width:559px; height:30px; margin-left:5px; border:1px #FC0 solid; background:#FFFFF4; font-size:20px; font-weight:bold; text-align:center; color:#003;}
+		.c1{ width:559px; height:460px; margin-left:5px;  margin-top:5px;}
+		.bb{ width:559px; height:440px;}
+				.bb table{ width:559px; text-align:center;}
+				.bb td{ font-size:13px; color:#036; border:1px #CCC solid;}
+		.aa{ idth:559px; height:30px; background:#ECFBFF; border:1px #AEF7DF solid;}
+				.aa table{ margin-left:200px; padding-top:5px;}
+				.dd{ float:right; margin-top:50px; font-size:12px; width:60px;}
+		  a{ text-decoration:none;}
+		  a:link {color:#F60; text-decoration:none;}
+		  a:active:{color:#093;}
+		  a:visited {color:#F60;text-decoration:none;} 
+		  a:hover {color:#093;}
+			
+			/*业务流水*/
+	#all5{ width:580px; height:500px; float:right;}
+		.ct{ widows:570px; height:460px; margin-left:5px;}
+			.ad{ width:560px; height:30px; margin-left:7px; margin-top:5px; border:1px #FC0 solid; background:#FFFFF4; font-size:20px; font-weight:bold; text-align:center; color:#003;}
+			.ar{ width:560px; height:30px; margin-left:7px; margin-top:5px; border:1px #FC0 solid; background:#FFFFF4; font-size:20px; font-weight:bold; text-align:center; color:#003;}
+			.as{ height:40px; width:560px; text-align:center;}	
+			.ds{ margin-top:10px;}
+			/*联系我们*/
+	#all6{ width:580px; height:500px; float:right;}
+	.df{ width:500px; height:330px; margin-left:40px; margin-top:20px;}
+		.ls{ font-size:16px; font-weight:bold;}
+		.le{ width:480px; height:280px; margin-left:10px; margin-top:10px; }
+		.le div{ width:360px; margin-left:80px; height:30px; font-size:14px;}
+			
+			
+#foot{ height:50px; width:1024px; margin:auto; padding:0px;}
+	.foot1{ margin-top:10px;}
+	.rel{ font-size:12px; color:#666; margin-top:10px; margin-left:20px;}
+	.rel a{ text-decoration:none;}
+		 .rel a:link {color:#000; text-decoration:none;}
+		 .rel a:active:{color:#F60; }
+		 .rel a:visited {color:#000;text-decoration:none;} 
+		 .rel a:hover {color:#F60;}

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+.Frame{ width:978px; margin:0px auto; margin-top:15px; height:auto; background-color:#fafafa;}
+
+.list{ width:978px; height:120px; margin-top:20px;}
+.list ul{ width:500; height:30px;}
+.list li{ float:left; list-style-type:none; line-height:30px; margin-left:10px; text-align:center; font-size:15px; font-family:"微软雅黑"; color:#555;}
+.list a{ font-size:13px; color:#9d9d9d; font-family:"宋体"; margin-top:10px; line-height:20px; }
+.hengxian{ margin:0px auto; width:954px;}
+
+.sc{ width:954px; margin:0px auto;}
+.sc li{ width:954px; height:88px;}
+.foodpic{ width:141px; height:61px; float:left; margin-top:10px;}
+.foodinformation{ width:680px; height:78px; margin-top:10px; margin-left:10px; float:left;}
+.foodinformation h1{ font-size:15px; color:#333; font-family:"微软雅黑"; width:auto; height:auto;}
+.foodinformation a{ font-size:15px; color:#333; font-family:"微软雅黑"; margin-left:5px; line-height:20px;}
+.foodinformation b{ font-size:13px; color:#9d9d9d; font-family:"微软雅黑";}
+.foodbutton{ width:118px; height:37px; float:left; margin-top:10px; margin-left:5px;}
+.fanye{
+	width:auto; margin:0px auto; height:23px;}
+.fanye li{ float:left; list-style-type:none; margin-left:10px; text-align:center;}

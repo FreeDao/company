@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+
+<link rel="stylesheet" type="text/css" href="css/list.css">
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/list.js"></script>
+<script type="text/javascript" src="js/iscrollAssist.js"></script>
+<script type="text/javascript" src="js/requestParam.js"></script>
+
+</head>
+<body style="overflow-y:hidden;position:absolute;left:0em;right:0em;top:0em;bottom:0em;margin:0em">
+
+<header>
+<a href="index.html"><img src="img/return.png" width="40"/></a>
+<h3></h3>
+</header>
+
+<div id="wrapper" style="position:absolute;width:100%;height:100%;overflow:hidden">
+	<dl style="-webkit-margin-before:0em;">
+
+			<div id="pulldown" >
+				<span class="pulldown-icon"></span><span id="pulldown-label"></span>
+			</div>
+			
+			<div id="dataArea">
+			</div>
+			
+			<div id="pullup" >
+				<span class="pullup-icon"></span><span id="pullup-label"></span>
+			</div>
+			
+	</dl>
+	</div>
+</body>
+</html>

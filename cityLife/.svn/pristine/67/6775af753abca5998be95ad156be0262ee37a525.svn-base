@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>发表评论</title>
+	
+   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="css/addComment.css">
+
+	<script type="text/javascript" src="js/js-ajax.js"></script>
+	<script type="text/javascript" src="js/requestParam.js"></script>
+	<script type="text/javascript" src="js/addComment.js" ></script>
+  </head>
+  
+  <body onload="myInit()">
+  	<form action="" method="post" id="myForm">
+  	<input type="hidden" name="level" id="level" value="0" />
+    <header>
+		<a id="back"  class=return onclick="window.history.back();" ><img src="img/return.png" width="40"/></a>
+  	</header>
+  	<div class=star >
+  		<div><label style="font-weight: 700;" >总体评价</label></div>
+  		<div>
+  		<img src="img/star_empty.png" width="30" onclick="changeImg(this)" class="1" name="img">
+  		<img src="img/star_empty.png" width="30" onclick="changeImg(this)" class="2" name="img">
+  		<img src="img/star_empty.png" width="30" onclick="changeImg(this)" class="3" name="img">
+  		<img src="img/star_empty.png" width="30" onclick="changeImg(this)" class="4" name="img">
+  		<img src="img/star_empty.png" width="30" onclick="changeImg(this)" class="5" name="img">
+  		</div>
+  	</div>
+  	<div class=content >
+	<textarea name="content" id="content" ></textarea>
+	</div>
+	<div class=bottom >
+		<button id="mybu" type="button" onclick="mySubmit()" >提&nbsp;&nbsp;交</button>
+	</div>
+	</form>
+	
+  </body>
+</html>

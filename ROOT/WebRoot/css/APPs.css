@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+.Application{ width:978px; height:auto; margin:0px auto; margin-top:10px;}
+.Application h1{ margin:0px; width:223px; height:30px;}
+.hengxian{ width:978px; height:23px; margin:0px auto; background:url(../images/MK2.jpg);}
+.hengxian2{width:978px; height:23px; margin:0px auto; background:url(../images/MK(2).jpg);}
+.yingyonghui{ width:978px; margin:0px auto; height:214px; margin-top:20px;}
+.yingyonghui dd{ float:left; width:139px; height:214px; margin:0px; background:url(../images/web_333.jpg);}
+.yingyonghui dd li{ margin:0px; margin-top:10px; margin-left:12px; list-style-type:none;  font-size:13px; font-family:"方正正中黑简体"; color:#fff;}
+.yingyonghui img{ margin-top:15px;}
+.fanye{
+	width:978px; margin:0px auto; height:23px;}
+.fanye ul{ margin:0px auto; height:23px;}	
+.fanye li{ float:left; list-style-type:none; margin-left:10px; text-align:center;}
+	.float_window{
+				margin-top:100px;
+				right:0px;
+				width: 150px;
+				height: 200px;
+				background: #fff;
+				position: fixed;
+				border:1px solid#999;
+				filter:alpha(opacity=100); 
+				-moz-opacity:1; 
+				opacity:1;
+				z-index: 40000;
+			}

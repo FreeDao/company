@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+				margin: 0;
+				padding: 0;
+			}
+			.div1{
+				margin: 0 auto;
+				width: 978px;
+				height: 330px;
+				position: relative;
+				margin-top:5px;
+			}
+			.change{
+				display: none;
+				position: absolute;
+				z-index: 1;
+			}
+			.item{
+				position: absolute;
+				top: 280px;
+				left: 580px;
+				z-index: 1000;
+			}
+			
+			.imgborder{
+				border: 1px solid white;
+			}
+			
+			.leftdiv{
+				position: absolute;
+				z-index:1000;
+				top: 80px;
+				left: 1px;
+				width: 95px;
+				height: 138px;
+			}
+			.leftdiv:hover{
+				background: url(images/a.jpg) no-repeat;
+			}
+			
+			.rightdiv{
+				position: absolute;
+				z-index:1000;
+				top: 80px;
+				left: 882px;
+				width: 95px;
+				height: 138px;
+			}
+			
+			.rightdiv:hover{
+				background: url(images/b.jpg) no-repeat;
+			}

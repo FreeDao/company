@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>地图</title>
+	
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">  
+body, html, #l-map {width: 100%;height: 100%;overflow: hidden;hidden;margin:0;}
+
+header {
+	z-index:9999999;
+	max-width:700px;
+	position:fixed;
+	width:100%;
+	min-height: 45px;
+	background-image: url("img/bg_title.png");
+}
+
+header a {
+	float: left;
+}
+
+header h3 {
+	margin: 0 auto;
+	padding-top: 13px;
+	font-size: 20px;
+	color: white;
+	width: 100px;
+	text-align: center;
+}
+  
+</style>  
+  </head>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=ZKZnABzs5B9yFhMd8VLgfeZj&v=1.0"></script>
+  <script type="text/javascript" src="js/requestParam.js"></script>
+   
+  <body>
+  <header>
+	<a onclick="window.history.back();"><img src="img/return.png" width="40"/></a>
+	<h3>地图</h3>
+	</header>
+  
+    <div id="l-map"  ></div>
+    <script type="text/javascript">  
+	    var log = getQueryStringByName("log");
+	    var dim = getQueryStringByName("dim");
+		var map = new BMap.Map("l-map");  
+		map.centerAndZoom(new BMap.Point(log, dim), 14);  
+		var marker = new BMap.Marker(new BMap.Point(log, dim));        // 创建标注      
+		map.addOverlay(marker);
+	</script> 
+  </body>
+</html>

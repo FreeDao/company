@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+
+<link rel="stylesheet" type="text/css" href="css/list.css">
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<!-- <script type="text/javascript" src="js/iscroll.js"></script> -->
+<script type="text/javascript" src="js/list.js"></script>
+<!-- <script type="text/javascript" src="js/iscrollAssist.js"></script> -->
+<script type="text/javascript" src="js/requestParam.js"></script>
+
+</head>
+<body >
+
+<header>
+<a onclick="window.history.back();"><img src="img/return.png" width="40"/></a>
+<h3></h3>
+</header>
+
+<dl id="dataArea">
+</dl>
+<div class="more" id="more" onclick="more()" >
+	<a >点击查看更多</a>
+ </div>
+
+<div class=loadingMore id=loadingMore >
+	<img src="img/loading.gif" />
+</div>
+<br/>
+
+<div class="bg" ></div>
+<div class="loadingBg" >
+	<div class="loadingContainer" >
+		<div class="loading" >
+			<div>
+			<img src="img/loading.gif" />
+			<span>查询中...</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function more(){
+		
+		var title = getQueryStringByName("type");
+		var typeId = getQueryStringByName("typeId");
+		var cityId = getQueryStringByName("cityId");
+		
+		var more = document.getElementById("more");
+		more.style.display = "none";
+		var loadingMore = document.getElementById("loadingMore");
+		loadingMore.style.display = "block";
+		
+		var url ="../dataExchange/getSellerList.action?&pageNo="+ (pageNow++) +"&pageNum="+limit+"&sellerId=-1&cityId="+cityId+"&log="+locaLng+"&dim="+locaLat;
+		
+		if( null != typeId && "" != typeId ){
+			url += "&typeId="+ typeId;
+		}
+		
+		$.ajax({
+			type : "get",
+			url : url,
+			beforeSend : function(XMLHttpRequest) {
+				// ShowLoading();
+			},
+			success : function(data, textStatus) {
+				var json = eval("(" + data + ")");
+				$.each(
+				json.results,
+				function(index, item) {
+					$("#dataArea")
+							.append(
+									"<dt onclick=\"postForm({'type':\'"
+											+ encodeURI(title)
+											+ "\','typeId':\'"
+											+ typeId
+											+ "\','cityId':\'"
+											+ cityId
+											+ "\','logo':\'"
+											+ item.logo
+											+ "\','title':\'"
+											+ encodeURI(item.titile)
+											+ "\','level':\'"
+											+ item.level
+											+ "\','preferen':\'"
+											+ item.preferential
+											+ "\','phone':\'"
+											+ item.phone
+											+ "\','address':\'"
+											+ encodeURI(item.address)
+											+ "\','product':\'"
+											+ encodeURI(item.name)
+											+ "\','productImgs':\'"
+											+ item.productImgs
+											+ "\','brief':\'"
+											+ encodeURI(item.brief)
+											+ "\','briefImgs':\'"
+											+ item.sellerImgs
+											+ "\','sellerId':\'"
+											+ item.id
+											+ "\','log':\'"
+											+ item.log
+											+ "\','dim':\'"
+											+ item.dim
+											+ "\'})\" ><div class='lineDiv' ><div class='imgDiv' ><img src='"
+											+ item.logo
+											+ "' width='81' height='62' /></div> <div class=contentDiv ><div class='titleDiv' ><h4>"
+											+ item.titile
+											+ "</h4><span><img src='img/position.png' width='7' />"+GetDistance(locaLat,locaLng,item.dim,item.log)+"km</span></div><div class='quotation' ><img src='img/arrow_right.png' width='4' /><span style='float:left;' >"
+											+ item.brief
+											+ "</span></div><div class='infoDiv' ><a href='tel:"
+											+ item.phone
+											+ "' class='phoneSpan' ><span>"
+											+ item.phone
+											+ "</span></a><span class='sign' >优惠:<span>"
+											+ item.preferential
+											+ "%</span></span></div></div></div> </div> </dt>");
+				});
+				loadingMore.style.display = "none";
+				
+				if( json.results.length != 0 ){
+					more.style.display = "block";
+				}
+			},
+			complete : function(XMLHttpRequest, textStatus) {
+				// HideLoading();
+			},
+			error : function() {
+				// 请求出错处理
+			}
+		});
+	}
+  </script>
+
+<!-- <div id="wrapper" style="position:absolute;width:100%;height:100%;overflow:hidden">
+	<dl style="-webkit-margin-before:0em;">
+
+			<div id="pulldown" >
+				<span class="pulldown-icon"></span><span id="pulldown-label"></span>
+			</div>
+			
+			
+			
+			<div id="pullup" >
+				<span class="pullup-icon"></span><span id="pullup-label"></span>
+			</div>
+			
+	</dl>
+	</div> -->
+</body>
+</html>

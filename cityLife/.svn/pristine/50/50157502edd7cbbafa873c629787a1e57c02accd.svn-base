@@ -1,0 +1,43 @@
+$(function(){
+	
+	/*$.ajax({ url: "dataExchange/getMarketList.action?&pageNo=1&pageNum=12&cityId=18", context: document.body, success: function(){
+        $(this).addClass("done");
+      }});*/
+	
+	/*alert($(window).height());
+	alert($(window).height()-82);
+	alert($(document).height());
+	alert($(document).height()-82);*/
+	/*var header_search_length = $(".header").height() + $(".search").height();
+	alert(header_search_length);
+	var temp = $(window).height() - header_search_length;
+	alert(temp);
+	alert(temp/$("#swipeLine").height());*/
+	
+	$.ajax({
+		type: "get",
+		url: "../dataExchange/getMarketList.action?&pageNo=1&pageNum=1000&cityId=18",
+		beforeSend: function(XMLHttpRequest){
+			//ShowLoading();
+		},
+		success: function(data, textStatus){
+			/*$("#test").html(data);*/
+
+			/*$(".ajax.ajaxResult").html("");
+			$("item",data).each(function(i, domEle){
+				$(".ajax.ajaxResult").append("<li>"+$(domEle).children("title").text()+"</li>");
+			});*/
+		},
+		complete: function(XMLHttpRequest, textStatus){
+			//HideLoading();
+		},
+		error: function(){
+			//请求出错处理
+		}
+});
+	
+	
+	/*$.get("dataExchange/getMarketList.action?&pageNo=1&pageNum=12&cityId=18", function(result){
+	    $("div").html(result);
+	  });*/
+})();

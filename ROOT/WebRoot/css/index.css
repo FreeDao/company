@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+<!--
+body{ background:url(../images/background.jpg);}
+#box{margin:0px auto; text-align:content;
+ padding:0px;}
+#Navigation{
+	 margin-left:50px;  height:80px; padding:0px; width:560px; float:left;} 
+#Navigation ul li{ line-height:80px; width:85px; text-align:center;}	
+#Navigation ul li a{  margin: 0 1px 0 0; text-align:center;
+	text-decoration: none;}	
+#Navigation { position:relative; width:560px; height:80px; margin-left:50px;}
+#Navigation ul { list-style-type:none; }
+#Navigation ul li { float:left; position: relative; width:80px; text-align:center;}
+#Navigation ul li{ font-size:15px; color:#fff; font-family:"微软雅黑"; margin:0px;}
+#Navigation ul li a {  display:block; text-decoration:none; text-align:center; color:#fff;}
+#Navigation ul li a:hover {background: #096b4f url(images/shadow.png) repeat-x; color:#fff;}
+#Navigation ul li ul {display: none;}
+#Navigation ul li:hover ul {display: block; position: absolute; top:80px; min-width:80px; left:0; right:0px;}
+#Navigation li:hover ul li a {display:block; background:#269777; color:#ffffff; width: 80px; text-align: center; border-bottom: 1px solid #f2f2f2; border-right: none;}
+#Navigation li:hover ul li a:hover { background:#096b4f; color:#ffffff; }
+.shouye1{ color:#fff; text-decoration:none;}
+.shouye2 a:link{ color:#9d9d9d; text-decoration:none;}
+.shouye2 a:visited{ color:#9d9d9d; text-decoration:none;}	
+.shouye2 a:hover{ color:#fff; text-decoration:none;}
+.shouye2 a:active{ color:#fff; text-decoration:none;}
+
+#nav { width:150px; height: 400px; border: 1px solid #D4CD49; position:fixed;left:0;top:30% }		
+	
+#news{
+	float:left; height:177px;}	
+#news ul li{
+	margin-top:10px; font-size:13px; font-family:"宋体"; color:#9d9d9d;}	
+#news ul li a:link{ color:#9d9d9d; text-decoration:none;}
+#news ul li a:visited{ color:#9d9d9d; text-decoration:none;}
+#news ul li a:hover{ color:#666; text-decoration:none;}	
+#news ul li a:active{ color:#666; text-decoration:none;}
+#footer{
+	 height:59px; margin-top:0px;}
+#footer ul li{
+	list-style-type:none; font-size:13px; font-family:"宋体"; color:#999; float:left; margin-left:5px;  line-height:30px; overflow:hidden; }
+#footer img{ margin-top:8px;}	
+#footer ul li a:link{ color:#9d9d9d; text-decoration:none;}
+#footer ul li a:visited{ color:#9d9d9d; text-decoration:none;}
+#footer ul li a:hover{ color:#666; text-decoration:none;}	
+#footer ul li a:active{ color:#666; text-decoration:none;}	
+ 
+.footer ul li{ padding:0px 3px;}
+
+body{width:100%; margin:0px; background-repeat:no-repeat; background-position:center;}
+.demo{
+				width: 309px;
+				height: 197px;
+			    background:url(../images/WEB_17.jpg) no-repeat;
+			}
+.demo:hover{ background:url(../images/web_117(1).jpg) no-repeat;
+			}
+.piont{
+	margin: 0 auto; width:110px;
+				height: 20px;
+				margin-top:5px;}
+.change{
+				display: none;}							
+.mainAdd{ margin: 4px;
+				width: 14px;
+				height: 14px;
+				float: left; background:url(../images/tcsh_01.jpg) no-repeat;
+				background-position: -14px 0;
+				}			
+.Typeface1{ font-size:13px; color:#fff; font-family:"微软雅黑";}
+.maintypefacel{ font-size:13px; color:#9d9d9d; font-family:"宋体";}
+.Navigation{ font-size:14px; color:#9d9d9d;}
+.offer{ font-size:23px; color:#269777; font-family:"方正韵动中黑简体";}
+.what{ font-size:15px; color:#ccc; font-family:"方正韵动中黑简体";}
+.tongchen{ color:#ff6d00; font-size:18px; font-family:"方正韵动中黑简体";}
+.qianyue{ color:#9d9d9d; font-size:18px; font-family:"方正韵动中黑简体";}
+ul{ list-style-type:none; margin:0px; padding:0px;}
+dd{ float:left; width:309px; height:197px;}
+span{ margin-left:0px;}
+.gengduo{ margin-top:10px; width:auto; height:auto;}
+.gengduo a{ font-size:13px; color:#269777; margin-left:10px;}
+.gengduo a:link{ color:#269777; text-decoration:none;}
+.gengduo a:visited{ color:#269777; text-decoration:none;}
+.gengduo a:hover{ color:#555; text-decoration:none;}
+.gengduo a:active{ color:#555; text-decoration:none;}
+img{ border:none;}
+a.current{font-weight:bold; color:#fff; text-decoration:none; line-height:20px;}
+.current a:link{ color:#249776; text-decoration:none;}
+.current a:visited{ color:#249776; text-decoration:none;}
+.current a:hover{ color:#249776; text-decoration:none;}
+.current a:active{ color:#249776; text-decoration:none;}
+	.float_window{
+				z-index:40000;
+				width: 150px;
+				height: 200px;
+				background: #fff;
+				position: absolute;
+				border:1px solid#999;
+				filter:alpha(opacity=100); 
+-moz-opacity:1; 
+opacity:1;
+			}
+#qq {
+    position:fixed; /* 固定位置 ie6不支持该属性 */
+
+top:0; /* 导航栏距离顶端为0像素 */
+/*ie6下样式，加下划线表示只针对ie6 的hack (可百度 css hack百度百科)*/
+  _position:absolute; /* 把导航栏位置定义为绝对位置，这句是关键1 */
+  _top:expression(eval(document.documentElement.scrollTop)); /* 把导航栏位置放在浏览器垂直滚动条的顶端，这句是关键2 */
+ overflow:auto;
+ z-index:9999; /* 让导航栏浮在网页的高层位置，遇到flash和图片时候也能始终保持最外层 */
+ left:0;right:0;margin:auto;
+}			
+-->
+.signUp{
+	position:fixed;
+	top:394px;
+}
